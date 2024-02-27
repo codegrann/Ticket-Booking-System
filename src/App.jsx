@@ -9,13 +9,15 @@ function App() {
   return (
     <div>
       <Navbar />
-      <Router>
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/admin" element={<Admin />} />
-          <Route path="/profile" element={<Client />} />
-        </Routes>
-      </Router>
+      <div className="px-4">
+        <Router>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route path="/admin" element={<Admin />} />
+            <Route path="/profile" element={<Client />} />
+          </Routes>
+        </Router>
+      </div>
       <Footer />
     </div>
   );
