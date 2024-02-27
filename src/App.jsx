@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function App() {
-  return <p>Welcome aboard app.jsx</p>;
+  return <p className="bg-red-900">Welcome aboard app.jsx</p>;
 }
 
 export default App;
