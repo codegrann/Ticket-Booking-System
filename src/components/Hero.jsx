@@ -27,7 +27,7 @@ function Hero() {
             immerse yourself in the world of programming.
             <br />
             Start your adventure today! Explore, book, and experience the magic
-            of events with EventTribe.
+            of events with <span className="font-bold">EventTribe</span>.
           </p>
           {/* <ClickForward label="Our services" buttonType="" /> */}
         </div>
