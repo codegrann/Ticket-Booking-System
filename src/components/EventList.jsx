@@ -5,7 +5,8 @@ function EventList() {
   const events = [
     {
       id: "event 1",
-      Date: "27/09/2021",
+      name: "React Bootathon Nairobi",
+      date: "27/09/2024",
       location: "Mumbai",
       tickets: [
         { type: "VIP", price: 1200 },

@@ -6,19 +6,21 @@ function EventCard({ event }) {
   const { id, name, date, location, tickets } = event;
 
   return (
-    <div className="event-card">
+    <div className="">
       <h2>{name}</h2>
-      <p>Date: {date}</p>
-      <p>Location: {location}</p>
+      <p className="flex gap-4">
+        <span>Date: {date}</span> <span>Location: {location}</span>
+      </p>
       <p>Tickets Available:</p>
-      <ul>
+      <ul className="flex gap-4">
         {tickets.map((ticket) => (
           <li key={ticket.type}>
-            {ticket.type}: ${ticket.price}
+            {ticket.type}:{" "}
+            <span className="text-yellow-400">${ticket.price}</span>
           </li>
         ))}
       </ul>
-      <Link to={`/events/${id}/book`} className="book-button">
+      <Link to={`/events/${id}/book`} className="btn btn-outline">
         Book Now
       </Link>
     </div>
