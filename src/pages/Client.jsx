@@ -1,4 +1,5 @@
 import React from "react";
+import MyEventsList from "../components/MyEventsList";
 
 function Client({ user, bookedEvents }) {
   console.log(user.name);
@@ -6,11 +7,7 @@ function Client({ user, bookedEvents }) {
   return (
     <>
       <div>{user.name}</div>
-      <ul>
-        {bookedEvents.map((event) => {
-          return <li key={event}>{event}</li>;
-        })}
-      </ul>
+      <MyEventsList bookedEvents={bookedEvents} />
     </>
   );
 }

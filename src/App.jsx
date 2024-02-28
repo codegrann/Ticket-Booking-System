@@ -15,9 +15,26 @@ function App() {
   const [selectedTicket, setSelectedTicket] = useState({});
   const [user, setUser] = useState({ name: "user 1" });
   const [bookedEvents, setBookedEvent] = useState([
-    "event 1",
-    "event 2",
-    "event 3",
+    {
+      id: "rbn27",
+      name: "React Bootathon Nairobi",
+      date: "27/09/2024",
+      location: "Nairobi",
+      tickets: [
+        { type: "VIP", price: 12 },
+        { type: "Regular", price: 6 },
+      ],
+    },
+    {
+      id: "wdw30",
+      name: "Web Development Workshop",
+      date: "30/09/2024",
+      location: "Mombasa",
+      tickets: [
+        { type: "VIP", price: 10 },
+        { type: "Regular", price: 5 },
+      ],
+    },
   ]);
 
   const events = [
