@@ -6,8 +6,8 @@ function EventCard({ event }) {
   const { id, name, date, location, tickets } = event;
 
   return (
-    <div className="">
-      <h2>{name}</h2>
+    <div className="border-2 rounded-lg shadow-lg p-4 space-y-2">
+      <h2 className="text-lg">{name}</h2>
       <p className="flex gap-4">
         <span>Date: {date}</span> <span>Location: {location}</span>
       </p>
