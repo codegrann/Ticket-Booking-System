@@ -1,15 +1,17 @@
 import React from "react";
 
 function Client({ user, bookedEvents }) {
+  console.log(user.name);
+
   return (
-    <div>
-      {user.name}
-      {bookedEvents.map((event) => {
-        <ul>
-          <li key={event}>{event}</li>
-        </ul>;
-      })}
-    </div>
+    <>
+      <div>{user.name}</div>
+      <ul>
+        {bookedEvents.map((event) => {
+          return <li key={event}>{event}</li>;
+        })}
+      </ul>
+    </>
   );
 }
 
