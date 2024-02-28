@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 const Modal = ({ closeModal, selectedTicket }) => {
   const handleTicketTypeSelection = (type) => {
     console.log(`Selected ticket type: ${type}`);
+    console.log(`${selectedTicket.tickets[0].type}`);
     // Add your logic for handling the selected ticket type here
   };
   //   const navigate = useNavigate();
@@ -24,10 +25,14 @@ const Modal = ({ closeModal, selectedTicket }) => {
               onClick={() => handleTicketTypeSelection(type)}
               className="px-4 py-2 bg-blue-500 text-white rounded-md mr-2"
             >
-              {type}:{selectedTicket.tickets.price}
+              {type}:{" $"}
+              {type == "VIP"
+                ? selectedTicket.tickets[0].price
+                : selectedTicket.tickets[1].price}
             </button>
           ))}
         </div>
+
         <button onClick={closeModal}>Back to events</button>
       </div>
     </div>
