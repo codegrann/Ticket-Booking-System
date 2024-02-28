@@ -12,7 +12,7 @@ function App() {
     <>
       <Router>
         <Navbar />
-        <div className="px-4 text-sm">
+        <div className="px-4 md:px-10 text-sm">
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/signup" element={<SignUp />} />
