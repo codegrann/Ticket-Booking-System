@@ -11,7 +11,7 @@ const Modal = ({ closeModal }) => {
 
   return (
     <div className="fixed z-10 top-[200px] inset-0 overflow-y-auto">
-      <div className="Modal bg-white p-8 rounded-sm text-center">
+      <div className="p-8 rounded-sm text-center ">
         <p className="my-0 mx-8">Item successfully added to cart!</p>
         <button>Go to Cart</button>
         <button onClick={closeModal}>Continue Shopping</button>
