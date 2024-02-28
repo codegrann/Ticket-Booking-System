@@ -17,7 +17,9 @@ function EventList() {
 
   return (
     <div>
-      <h3 className="text-black font-medium md:text-xl">Upcoming Events</h3>
+      <h3 className="text-black font-medium md:text-xl mt-6">
+        Upcoming Events
+      </h3>
       <div>
         {events.map((event) => (
           <EventCard key={event.id} event={event} />
