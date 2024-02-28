@@ -35,6 +35,7 @@ const Navbar = () => {
         </div>
         <div className={`nav-elements  ${showNavbar && "active"} `}>
           <ul>
+            <li>Events</li>
             <li
               id="getstarted"
               className="btn btn-success btn-outline"
