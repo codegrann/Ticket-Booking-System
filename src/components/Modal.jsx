@@ -14,9 +14,9 @@ const Modal = ({ closeModal, selectedTicket }) => {
   //   };
 
   return (
-    <div className="fixed z-10 top-[200px] inset-0 overflow-y-auto">
-      <div className="p-8 rounded-sm text-center bg-gray-900 text-white">
-        <p className="text-gray-600 mb-2">Ticket Name: {selectedTicket}</p>
+    <div className="fixed z-10 top-[200px] max-w-[500px] mx-auto inset-0 overflow-y-auto rounded-lg">
+      <div className="p-8 rounded-lg text-center bg-gray-900 text-white">
+        <p className="text-gray-600 mb-2">Ticket Name: {selectedTicket.name}</p>
         <div className="flex justify-between mb-4">
           {["VIP", "Regular"].map((type) => (
             <button
@@ -24,7 +24,7 @@ const Modal = ({ closeModal, selectedTicket }) => {
               onClick={() => handleTicketTypeSelection(type)}
               className="px-4 py-2 bg-blue-500 text-white rounded-md mr-2"
             >
-              {type}
+              {type}:{selectedTicket.tickets.price}
             </button>
           ))}
         </div>

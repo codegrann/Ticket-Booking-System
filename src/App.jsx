@@ -12,7 +12,7 @@ import Modal from "./components/Modal";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
-  const [selectedTicket, setSelectedTicket] = useState("");
+  const [selectedTicket, setSelectedTicket] = useState({});
 
   const events = [
     {
@@ -57,7 +57,7 @@ function App() {
     },
   ];
   const bookTicket = (ticket) => {
-    setSelectedTicket(ticket.name);
+    setSelectedTicket(ticket);
     setShowModal(true);
   };
   const closeModal = () => setShowModal(false);
