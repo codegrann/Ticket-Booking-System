@@ -36,11 +36,7 @@ function App() {
       ],
     },
   ]);
-  const addToMyEvents = (event) => {
-    setBookedEvent([...bookedEvents, event]);
-  };
-
-  const events = [
+  const [events, setEvents] = useState([
     {
       id: "rbn27",
       name: "React Bootathon Nairobi",
@@ -81,7 +77,16 @@ function App() {
         { type: "Regular", price: 5 },
       ],
     },
-  ];
+  ]);
+  const addToMyEvents = (event) => {
+    setBookedEvent([...bookedEvents, event]);
+  };
+  const removeFromMyEvents = (event) => {
+    console.log("removed");
+    // console.log(bookedEvents.filter((e) => e.id !== event.id));
+    // setBookedEvent(bookedEvents.filter((e) => e.id !== event.id));
+  };
+
   const bookTicket = (ticket) => {
     setSelectedTicket(ticket);
     setShowModal(true);
@@ -118,7 +123,13 @@ function App() {
             <Route path="/admin" element={<Admin />} />
             <Route
               path="/profile"
-              element={<Client user={user} bookedEvents={bookedEvents} />}
+              element={
+                <Client
+                  user={user}
+                  bookedEvents={bookedEvents}
+                  removeFromMyEvents={removeFromMyEvents}
+                />
+              }
             />
           </Routes>
         </div>

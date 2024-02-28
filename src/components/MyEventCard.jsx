@@ -2,8 +2,8 @@ import React from "react";
 // import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-function MyEventCard({ event }) {
-  console.log(event);
+function MyEventCard({ event, removeFromMyEvents }) {
+  //   console.log(event);
   const { id, name, date, location, tickets } = event;
 
   return (
@@ -14,7 +14,7 @@ function MyEventCard({ event }) {
       </p>
       <ul className="flex gap-4">
         {tickets.map((ticket) => (
-          <li>
+          <li key={ticket.type}>
             <span>Your seat: </span>
             {ticket.type}:{" "}
             <span
@@ -27,6 +27,9 @@ function MyEventCard({ event }) {
           </li>
         ))}
       </ul>
+      <button className="btn btn-error text-sm" onClick={removeFromMyEvents}>
+        Not going
+      </button>
     </div>
   );
 }
