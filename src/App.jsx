@@ -12,9 +12,8 @@ import Modal from "./components/Modal";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
-  const bookTicket = () => {
-    setShowModal(true);
-  };
+  const [selectedTicket, setSelectedTicket] = useState(null);
+
   const events = [
     {
       id: "rbn27",
@@ -57,6 +56,10 @@ function App() {
       ],
     },
   ];
+  const bookTicket = (ticket) => {
+    setSelectedTicket(ticket);
+    setShowModal(true);
+  };
   const closeModal = () => setShowModal(false);
   return (
     <>
@@ -70,7 +73,12 @@ function App() {
               element={
                 <>
                   <Home bookTicket={bookTicket} events={events} />
-                  {showModal && <Modal closeModal={closeModal} />}
+                  {showModal && (
+                    <Modal
+                      closeModal={closeModal}
+                      selectedTicket={selectedTicket}
+                    />
+                  )}
                 </>
               }
             />
