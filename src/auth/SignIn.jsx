@@ -11,8 +11,9 @@ const SignIn = () => {
 
   const handleSignin = (e) => {
     e.preventDefault();
+    prompt("Choose role: ADMIN/CLIENT");
     alert("login successfull");
-    navigate("/");
+    // navigate("/");
   };
 
   return (

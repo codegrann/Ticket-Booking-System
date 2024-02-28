@@ -43,7 +43,7 @@ const Navbar = () => {
               id="getstarted"
               className="btn btn-success btn-outline"
               onClick={() => {
-                navigate("/signup");
+                navigate("/signin");
               }}
             >
               <span className="font-semibold">Get started</span>
