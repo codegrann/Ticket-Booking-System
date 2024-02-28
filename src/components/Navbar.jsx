@@ -10,7 +10,7 @@ import Hamburger from "../assets/Hamburger";
 
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(false);
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar);
@@ -19,13 +19,29 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="container ">
-        <div className="logo">logo</div>
+        <div
+          className="logo"
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          logo
+        </div>
         <div className="menu-icon" onClick={handleShowNavbar}>
           <Hamburger />
         </div>
         <div className={`nav-elements  ${showNavbar && "active"} `}>
           <ul>
             <li>Events</li>
+            <li
+              id="getstarted"
+              className="btn btn-success btn-outline"
+              onClick={() => {
+                navigate("/signup");
+              }}
+            >
+              <span className="font-semibold">Get started</span>
+            </li>
           </ul>
         </div>
       </div>
