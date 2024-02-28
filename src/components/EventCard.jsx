@@ -16,7 +16,13 @@ function EventCard({ event }) {
         {tickets.map((ticket) => (
           <li key={ticket.type}>
             {ticket.type}:{" "}
-            <span className="text-yellow-400">${ticket.price}</span>
+            <span
+              className={
+                ticket.type == "VIP" ? "text-yellow-700" : "text-green-500"
+              }
+            >
+              ${ticket.price}
+            </span>
           </li>
         ))}
       </ul>
