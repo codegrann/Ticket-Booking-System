@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 function MyEventCard({ event, removeFromMyEvents }) {
   //   console.log(event);
   const { id, name, date, location, tickets } = event;
+  const removeEvent = () => () => {
+    removeFromMyEvents(event);
+  };
 
   return (
     <div className="border-2 rounded-lg shadow-lg p-4 flex flex-col gap-4 min-w-[290px] max-w-[435px]">
@@ -27,7 +30,7 @@ function MyEventCard({ event, removeFromMyEvents }) {
           </li>
         ))}
       </ul>
-      <button className="btn btn-error text-sm" onClick={removeFromMyEvents}>
+      <button className="btn btn-error text-sm" onClick={removeEvent}>
         Not going
       </button>
     </div>

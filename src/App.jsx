@@ -14,28 +14,6 @@ function App() {
   const [showModal, setShowModal] = useState(false);
   const [selectedTicket, setSelectedTicket] = useState({});
   const [user, setUser] = useState({ name: "user 1" });
-  const [bookedEvents, setBookedEvent] = useState([
-    {
-      id: "rbn27",
-      name: "React Bootathon Nairobi",
-      date: "27/09/2024",
-      location: "Nairobi",
-      tickets: [
-        { type: "VIP", price: 12 },
-        { type: "Regular", price: 6 },
-      ],
-    },
-    {
-      id: "wdw30",
-      name: "Web Development Workshop",
-      date: "30/09/2024",
-      location: "Mombasa",
-      tickets: [
-        { type: "VIP", price: 10 },
-        { type: "Regular", price: 5 },
-      ],
-    },
-  ]);
   const [events, setEvents] = useState([
     {
       id: "rbn27",
@@ -78,13 +56,38 @@ function App() {
       ],
     },
   ]);
+  const [bookedEvents, setBookedEvent] = useState([
+    {
+      id: "rbn27",
+      name: "React Bootathon Nairobi",
+      date: "27/09/2024",
+      location: "Nairobi",
+      tickets: [
+        { type: "VIP", price: 12 },
+        { type: "Regular", price: 6 },
+      ],
+    },
+    {
+      id: "wdw30",
+      name: "Web Development Workshop",
+      date: "30/09/2024",
+      location: "Mombasa",
+      tickets: [
+        { type: "VIP", price: 10 },
+        { type: "Regular", price: 5 },
+      ],
+    },
+  ]);
+  const [bookedEventsCount, setBookedEventsCount] = useState(
+    bookedEvents.length
+  );
   const addToMyEvents = (event) => {
     setBookedEvent([...bookedEvents, event]);
   };
   const removeFromMyEvents = (event) => {
     console.log("removed");
     // console.log(bookedEvents.filter((e) => e.id !== event.id));
-    // setBookedEvent(bookedEvents.filter((e) => e.id !== event.id));
+    setBookedEvent(bookedEvents.filter((e) => e.id !== event.id));
   };
 
   const bookTicket = (ticket) => {
@@ -128,6 +131,7 @@ function App() {
                   user={user}
                   bookedEvents={bookedEvents}
                   removeFromMyEvents={removeFromMyEvents}
+                  bookedEventsCount={bookedEventsCount}
                 />
               }
             />
