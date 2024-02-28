@@ -55,7 +55,14 @@ const Navbar = () => {
               }}
             >
               <ImageContainer imageurl="/person.png" size={10} />
-              {/* <img src="/person.png" alt="usericon" className=" size" /> */}
+            </li>
+            <li
+              className="border-2 cursor-pointer w-16 md:w-8"
+              onClick={() => {
+                navigate("/admin");
+              }}
+            >
+              <ImageContainer imageurl="/person.png" size={10} />
             </li>
             <li onClick={logOut}>Log out</li>
           </ul>

@@ -13,7 +13,12 @@ import Modal from "./components/Modal";
 function App() {
   const [showModal, setShowModal] = useState(false);
   const [selectedTicket, setSelectedTicket] = useState({});
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState({ name: "user 1" });
+  const [bookedEvents, setBookedEvent] = useState([
+    "event 1",
+    "event 2",
+    "event 3",
+  ]);
 
   const events = [
     {
@@ -90,7 +95,10 @@ function App() {
             <Route path="/signup" element={<SignUp />} />
             <Route path="/signin" element={<SignIn />} />
             <Route path="/admin" element={<Admin />} />
-            <Route path="/profile" element={<Client />} />
+            <Route
+              path="/profile"
+              element={<Client user={user} bookedEvents={bookedEvents} />}
+            />
           </Routes>
         </div>
         <Footer />
