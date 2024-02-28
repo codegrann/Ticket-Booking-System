@@ -102,7 +102,6 @@ function App() {
                     bookTicket={bookTicket}
                     events={events}
                     selectedTicket={selectedTicket}
-                    addToMyEvents={addToMyEvents}
                   />
                   {showModal && (
                     <Modal

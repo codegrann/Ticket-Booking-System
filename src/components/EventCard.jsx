@@ -2,7 +2,7 @@ import React from "react";
 // import PropTypes from "prop-types";
 import { Link } from "react-router-dom"; // Assuming you're using React Router for navigation
 
-function EventCard({ event, addToMyEvents, bookTicket, selectedTicket }) {
+function EventCard({ event, bookTicket, selectedTicket }) {
   const { id, name, date, location, tickets } = event;
 
   return (

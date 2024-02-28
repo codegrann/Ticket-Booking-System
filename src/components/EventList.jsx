@@ -1,7 +1,7 @@
 import React from "react";
 import EventCard from "./EventCard";
 
-function EventList({ bookTicket, addToMyEvents, events, selectedTicket }) {
+function EventList({ bookTicket, events, selectedTicket }) {
   return (
     <div className="my-10">
       <h3 className="text-black font-medium md:text-xl mb-4">
@@ -13,7 +13,6 @@ function EventList({ bookTicket, addToMyEvents, events, selectedTicket }) {
             key={event.id}
             event={event}
             bookTicket={bookTicket}
-            addToMyEvents={addToMyEvents}
             selectedTicket={selectedTicket}
           />
         ))}
