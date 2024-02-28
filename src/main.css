@@ -1217,6 +1217,14 @@ html {
     border-color: var(--btn-color, var(--fallback-b2));
   }
 
+  .btn-primary {
+    --btn-color: var(--fallback-p);
+  }
+
+  .btn-secondary {
+    --btn-color: var(--fallback-s);
+  }
+
   .btn-success {
     --btn-color: var(--fallback-su);
   }
@@ -1265,10 +1273,30 @@ html {
   outline-offset: 2px;
 }
 
+.btn-primary {
+  --tw-text-opacity: 1;
+  color: var(--fallback-pc,oklch(var(--pc)/var(--tw-text-opacity)));
+  outline-color: var(--fallback-p,oklch(var(--p)/1));
+}
+
 @supports (color: oklch(0 0 0)) {
+  .btn-primary {
+    --btn-color: var(--p);
+  }
+
+  .btn-secondary {
+    --btn-color: var(--s);
+  }
+
   .btn-success {
     --btn-color: var(--su);
   }
+}
+
+.btn-secondary {
+  --tw-text-opacity: 1;
+  color: var(--fallback-sc,oklch(var(--sc)/var(--tw-text-opacity)));
+  outline-color: var(--fallback-s,oklch(var(--s)/1));
 }
 
 .btn-success {
@@ -1662,8 +1690,16 @@ html {
   align-items: center;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .justify-between {
   justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
 }
 
 .gap-4 {
@@ -1805,6 +1841,11 @@ html {
 .text-yellow-700 {
   --tw-text-opacity: 1;
   color: rgb(161 98 7 / var(--tw-text-opacity));
+}
+
+.text-gray-200 {
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity));
 }
 
 .shadow-lg {

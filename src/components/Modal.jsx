@@ -16,9 +16,13 @@ const Modal = ({ closeModal, selectedTicket }) => {
 
   return (
     <div className="fixed z-10 top-[200px] max-w-[500px] mx-auto inset-0 overflow-y-auto rounded-lg">
-      <div className="p-8 rounded-lg text-center bg-gray-900 text-white">
-        <p className="text-gray-600 mb-2">Ticket Name: {selectedTicket.name}</p>
-        <div className="flex justify-between mb-4">
+      <div className="p-8 rounded-lg text-center bg-gray-900 text-white space-y-4">
+        <p className="text-gray-200 mb-2">Event: {selectedTicket.name}</p>
+        <p className="flex gap-4 justify-center">
+          <span>When: {selectedTicket.date}</span>
+          <span>Venue: {selectedTicket.location}</span>
+        </p>
+        <div className="flex gap-4 justify-around">
           {["VIP", "Regular"].map((type) => (
             <button
               key={type}
@@ -33,7 +37,9 @@ const Modal = ({ closeModal, selectedTicket }) => {
           ))}
         </div>
 
-        <button onClick={closeModal}>Back to events</button>
+        <button onClick={closeModal} className="btn btn-primary btn-outline">
+          Back to events
+        </button>
       </div>
     </div>
   );
