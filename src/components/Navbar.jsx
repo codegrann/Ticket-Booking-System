@@ -19,14 +19,13 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="container ">
-        <div className="logo">{/* <Link to="/"><Logo /></Link> */}</div>
+        <div className="logo">logo</div>
         <div className="menu-icon" onClick={handleShowNavbar}>
           <Hamburger />
-          <p>menu icon</p>
         </div>
         <div className={`nav-elements  ${showNavbar && "active"} `}>
           <ul>
-            <li>item 1</li>
+            <li>Events</li>
           </ul>
         </div>
       </div>
