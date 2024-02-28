@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #fcfcfc;
+  color: rgb(86, 83, 83);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar {
+  height: 60px;
+  padding-block: 2.4rem;
+  background-color: #fef7e5;
+  position: fixed;
+  top: 0;
+  border-bottom: 1px solid gray;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.nav-elements {
+}
+
+.nav-elements ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+
+.nav-elements ul li:not(:last-child) {
+  margin-right: 60px;
+}
+
+.nav-elements ul a {
+  font-size: 16px;
+  font-weight: 400;
+  color: #2f234f;
+  text-decoration: none;
+}
+
+.nav-elements ul a.active {
+  color: #574c4c;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-elements ul a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #574c4c;
+}
+
+#signupdropdown {
+  /* color: red; */
+}
+/* #dropdown { */
+/* display: none; */
+/* width: 8rem; */
+/* padding-block: 0.5rem; */
+/* border: 0.1rem solid #9c9999; */
+/* box-shadow: 1px 1px 15px #9c9999, -1px -1px 15px #9c9999; */
+/* position: relative; */
+/* background-color: #fef7e5; */
+/* position: absolute; */
+/* padding-left: 2rem; */
+/* } */
+/* #signupdropdown:hover #dropdown { */
+/* display: flex; */
+/* flex-direction: column; */
+/* gap: 0.25rem; */
+/* } */
+
+@media (max-width: 768px) {
+  .nav-elements ul li:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-elements {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: #fef7e5;
+    width: 0px;
+    height: calc(100vh - 60px);
+    transition: all 0.3s ease-in;
+    overflow: hidden;
+  }
+
+  .nav-elements.active {
+    width: 270px;
+  }
+
+  .nav-elements ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-elements ul li {
+    margin-right: unset;
+    margin-top: 22px;
+    padding-left: 20px;
+  }
+  #getstarted {
+    width: 80%;
+    margin-inline: auto;
+    /* height: 25px; */
+  }
+}
