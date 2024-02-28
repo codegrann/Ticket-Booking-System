@@ -4,18 +4,18 @@ import { Link } from "react-router-dom";
 
 function MyEventCard({ event }) {
   console.log(event);
-  //   const { id, name, date, location, tickets } = event;
+  const { id, name, date, location, tickets } = event;
 
   return (
     <div className="border-2 rounded-lg shadow-lg p-4 flex flex-col gap-4 min-w-[290px] max-w-[435px]">
       <h2 className="text-lg">{name}</h2>
       <p className="flex gap-4">
-        <span>Date: {event.date}</span> <span>Location: {event.location}</span>
+        <span>Date: {date}</span> <span>Location: {location}</span>
       </p>
-      <p>Tickets Available:</p>
       <ul className="flex gap-4">
-        {event.tickets.map((ticket) => (
+        {tickets.map((ticket) => (
           <li>
+            <span>Your seat: </span>
             {ticket.type}:{" "}
             <span
               className={
@@ -27,13 +27,6 @@ function MyEventCard({ event }) {
           </li>
         ))}
       </ul>
-      <Link
-        // to={`/events/${id}/book`}
-        className="btn btn-outline"
-        onClick={() => bookTicket(event)}
-      >
-        Book Now
-      </Link>
     </div>
   );
 }
