@@ -2,7 +2,7 @@ import React from "react";
 // import PropTypes from "prop-types";
 import { Link } from "react-router-dom"; // Assuming you're using React Router for navigation
 
-function EventCard({ event }) {
+function EventCard({ event, bookTicket }) {
   const { id, name, date, location, tickets } = event;
 
   return (
@@ -26,7 +26,11 @@ function EventCard({ event }) {
           </li>
         ))}
       </ul>
-      <Link to={`/events/${id}/book`} className="btn btn-outline">
+      <Link
+        // to={`/events/${id}/book`}
+        className="btn btn-outline"
+        onClick={() => bookTicket()}
+      >
         Book Now
       </Link>
     </div>

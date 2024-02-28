@@ -1,7 +1,7 @@
 import React from "react";
 import EventCard from "./EventCard";
 
-function EventList() {
+function EventList({ bookTicket }) {
   const events = [
     {
       id: "rbn27",
@@ -52,7 +52,7 @@ function EventList() {
       </h3>
       <div className="flex flex-col gap-4 flex-wrap md:flex-row">
         {events.map((event) => (
-          <EventCard key={event.id} event={event} />
+          <EventCard key={event.id} event={event} bookTicket={bookTicket} />
         ))}
       </div>
     </div>
