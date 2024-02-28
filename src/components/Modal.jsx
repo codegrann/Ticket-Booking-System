@@ -1,7 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const Modal = ({ closeModal, addToMyEvents, selectedTicket }) => {
+const Modal = ({
+  closeModal,
+  addToMyEvents,
+  selectedTicket,
+  bookedEvents,
+  bookedEventsCount,
+}) => {
   const navigate = useNavigate();
   const goToMyEvents = () => {
     closeModal();
@@ -9,6 +15,14 @@ const Modal = ({ closeModal, addToMyEvents, selectedTicket }) => {
   };
   const handleTicketTypeSelection = (type) => {
     console.log(`Selected ticket type: ${type}`);
+    if (bookedEvents.includes(selectedTicket)) {
+      alert("You already booked this event");
+      return;
+    }
+    if (bookedEventsCount > 5) {
+      alert("You can only book 5 events at a time");
+      return;
+    }
     addToMyEvents(selectedTicket);
     alert(`You booked ${type} successfully`);
   };

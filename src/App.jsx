@@ -82,11 +82,18 @@ function App() {
     bookedEvents.length
   );
   const addToMyEvents = (event) => {
+    if (bookedEventsCount > 5) {
+      alert("You can only book 5 events at a time");
+      return;
+    }
+
+    setBookedEventsCount(bookedEventsCount + 1);
     setBookedEvent([...bookedEvents, event]);
   };
   const removeFromMyEvents = (event) => {
     console.log("removed");
     // console.log(bookedEvents.filter((e) => e.id !== event.id));
+    setBookedEventsCount(bookedEventsCount - 1);
     setBookedEvent(bookedEvents.filter((e) => e.id !== event.id));
   };
 
@@ -116,6 +123,8 @@ function App() {
                       closeModal={closeModal}
                       addToMyEvents={addToMyEvents}
                       selectedTicket={selectedTicket}
+                      bookedEvents={bookedEvents}
+                      bookedEventsCount={bookedEventsCount}
                     />
                   )}
                 </>
