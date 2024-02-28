@@ -17,6 +17,9 @@ const Navbar = () => {
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar);
   };
+  const logOut = () => {
+    alert("logged out successfully");
+  };
 
   return (
     <nav className="navbar">
@@ -54,6 +57,7 @@ const Navbar = () => {
               <ImageContainer imageurl="/person.png" size={10} />
               {/* <img src="/person.png" alt="usericon" className=" size" /> */}
             </li>
+            <li onClick={logOut}>Log out</li>
           </ul>
         </div>
       </div>
