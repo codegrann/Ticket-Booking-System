@@ -2,7 +2,7 @@ import React from "react";
 import Hero from "../components/Hero";
 import EventList from "../components/EventList";
 
-function Home({ bookTicket, events, selectedTicket }) {
+function Home({ bookTicket, addToMyEvents, events, selectedTicket }) {
   return (
     <div>
       <Hero />
@@ -10,6 +10,7 @@ function Home({ bookTicket, events, selectedTicket }) {
         bookTicket={bookTicket}
         events={events}
         selectedTicket={selectedTicket}
+        addToMyEvents={addToMyEvents}
       />
     </div>
   );

@@ -36,6 +36,9 @@ function App() {
       ],
     },
   ]);
+  const addToMyEvents = (event) => {
+    setBookedEvent([...bookedEvents, event]);
+  };
 
   const events = [
     {
@@ -99,10 +102,12 @@ function App() {
                     bookTicket={bookTicket}
                     events={events}
                     selectedTicket={selectedTicket}
+                    addToMyEvents={addToMyEvents}
                   />
                   {showModal && (
                     <Modal
                       closeModal={closeModal}
+                      addToMyEvents={addToMyEvents}
                       selectedTicket={selectedTicket}
                     />
                   )}

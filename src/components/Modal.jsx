@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const Modal = ({ closeModal, selectedTicket }) => {
+const Modal = ({ closeModal, addToMyEvents, selectedTicket }) => {
   const navigate = useNavigate();
   const goToMyEvents = () => {
     closeModal();
@@ -9,6 +9,7 @@ const Modal = ({ closeModal, selectedTicket }) => {
   };
   const handleTicketTypeSelection = (type) => {
     console.log(`Selected ticket type: ${type}`);
+    addToMyEvents(selectedTicket);
     alert(`You booked ${type} successfully`);
   };
 
