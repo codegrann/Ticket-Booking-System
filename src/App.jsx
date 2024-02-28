@@ -49,45 +49,44 @@ function App() {
       id: "mdgs02",
       name: "MongoDB - Getting Started",
       date: "02/11/2024",
-      location: "Nairoi",
-      tickets: [
-        { type: "VIP", price: 12 },
-        { type: "Regular", price: 5 },
-      ],
-    },
-  ]);
-  const [bookedEvents, setBookedEvent] = useState([
-    {
-      id: "rbn27",
-      name: "React Bootathon Nairobi",
-      date: "27/09/2024",
       location: "Nairobi",
       tickets: [
         { type: "VIP", price: 12 },
-        { type: "Regular", price: 6 },
-      ],
-    },
-    {
-      id: "wdw30",
-      name: "Web Development Workshop",
-      date: "30/09/2024",
-      location: "Mombasa",
-      tickets: [
-        { type: "VIP", price: 10 },
         { type: "Regular", price: 5 },
       ],
     },
+    {
+      id: "gswm04",
+      name: "Getting Started with MySQL",
+      date: "04/11/2024",
+      location: "Nairobi",
+      tickets: [
+        { type: "VIP", price: 8 },
+        { type: "Regular", price: 5 },
+      ],
+    },
+    {
+      id: "tfoai10",
+      name: "The future of AI",
+      date: "10/11/2024",
+      location: "Nairobi",
+      tickets: [
+        { type: "VIP", price: "free" },
+        { type: "Regular", price: "free" },
+      ],
+    },
   ]);
+  const [bookedEvents, setBookedEvent] = useState([]);
   const [bookedEventsCount, setBookedEventsCount] = useState(
     bookedEvents.length
   );
   const addToMyEvents = (event) => {
-    if (bookedEventsCount > 5) {
-      alert("You can only book 5 events at a time");
-      return;
-    }
-
     setBookedEventsCount(bookedEventsCount + 1);
+    // if (bookedEventsCount > 5) {
+    //   alert("You can only book 5 events at a time");
+    //   return;
+    // }
+
     setBookedEvent([...bookedEvents, event]);
   };
   const removeFromMyEvents = (event) => {
