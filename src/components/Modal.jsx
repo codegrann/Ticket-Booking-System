@@ -2,15 +2,14 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const Modal = ({ closeModal, selectedTicket }) => {
+  const navigate = useNavigate();
+  const goToMyEvents = () => {
+    closeModal();
+    navigate("/profile");
+  };
   const handleTicketTypeSelection = (type) => {
     console.log(`Selected ticket type: ${type}`);
     alert(`You booked ${type} successfully`);
-    //   const navigate = useNavigate();
-
-    //   const goToCart = () => {
-    //     closeModal();
-    //     navigate("/cart");
-    //   };
   };
 
   return (
@@ -36,7 +35,10 @@ const Modal = ({ closeModal, selectedTicket }) => {
           ))}
         </div>
         <div className="flex justify-center gap-2 ">
-          <button className="btn btn-primary btn-outline px-2">
+          <button
+            className="btn btn-primary btn-outline px-2"
+            onClick={goToMyEvents}
+          >
             View my events
           </button>
           <button

@@ -13,6 +13,7 @@ import Modal from "./components/Modal";
 function App() {
   const [showModal, setShowModal] = useState(false);
   const [selectedTicket, setSelectedTicket] = useState({});
+  const [user, setUser] = useState(null);
 
   const events = [
     {

@@ -7,9 +7,9 @@ function Footer() {
     <footer className="footer p-4 md:p-10 bg-base-300 text-base-content">
       <nav>
         <h6 className="footer-title">Services</h6>
-        <a className="link link-hover">Lorem</a>
-        <a className="link link-hover">Lorem</a>
-        <a className="link link-hover">Lorem</a>
+        <a className="link link-hover">Event hosting</a>
+        <a className="link link-hover">Reception</a>
+        <a className="link link-hover">Public Address</a>
       </nav>
       <nav>
         <h6 className="footer-title">Company</h6>
