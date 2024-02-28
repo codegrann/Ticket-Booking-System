@@ -4,14 +4,14 @@ import { useNavigate } from "react-router-dom";
 const Modal = ({ closeModal, selectedTicket }) => {
   const handleTicketTypeSelection = (type) => {
     console.log(`Selected ticket type: ${type}`);
-    // Add your logic for handling the selected ticket type here
-  };
-  //   const navigate = useNavigate();
+    alert(`You booked ${type} successfully`);
+    //   const navigate = useNavigate();
 
-  //   const goToCart = () => {
-  //     closeModal();
-  //     navigate("/cart");
-  //   };
+    //   const goToCart = () => {
+    //     closeModal();
+    //     navigate("/cart");
+    //   };
+  };
 
   return (
     <div className="fixed z-10 top-[200px] max-w-[500px] mx-auto inset-0 overflow-y-auto rounded-lg">
