@@ -76,10 +76,12 @@ function App() {
       ],
     },
   ]);
-  const [bookedEvents, setBookedEvent] = useState([]);
+  const [bookedEvents, setBookedEvents] = useState([]);
   const [bookedEventsCount, setBookedEventsCount] = useState(
     bookedEvents.length
   );
+
+  // MANAGING USER EVENTS
   const addToMyEvents = (event) => {
     setBookedEventsCount(bookedEventsCount + 1);
     // if (bookedEventsCount > 5) {
@@ -87,13 +89,13 @@ function App() {
     //   return;
     // }
 
-    setBookedEvent([...bookedEvents, event]);
+    setBookedEvents([...bookedEvents, event]);
   };
   const removeFromMyEvents = (event) => {
     console.log("removed");
     // console.log(bookedEvents.filter((e) => e.id !== event.id));
     setBookedEventsCount(bookedEventsCount - 1);
-    setBookedEvent(bookedEvents.filter((e) => e.id !== event.id));
+    setBookedEvents(bookedEvents.filter((e) => e.id !== event.id));
   };
 
   const bookTicket = (ticket) => {
@@ -101,6 +103,7 @@ function App() {
     setShowModal(true);
   };
   const closeModal = () => setShowModal(false);
+
   return (
     <>
       <Router>
