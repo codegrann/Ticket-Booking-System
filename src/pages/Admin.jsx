@@ -14,9 +14,14 @@ function Admin({ events }) {
         Add event
       </button>
       {addClicked && (
-        <form>
-          <input type="text" />
-        </form>
+        <>
+          <button onClick={() => setAddClicked(false)}>Cancel</button>
+          <form>
+            <input type="text" placeholder="enter event name" />
+            <input type="text" placeholder="enter event date" />
+            <input type="text" placeholder="enter event location" />
+          </form>
+        </>
       )}
       <EventList events={events} />
     </div>
