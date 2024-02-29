@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import EventList from "../components/EventList";
 
-function Admin({ events }) {
+function Admin({ events, addEvent }) {
   const [addClicked, setAddClicked] = useState(false);
   const [eventName, setName] = useState("");
   const [date, setDate] = useState("");
@@ -20,7 +20,9 @@ function Admin({ events }) {
         VIP: VIP,
         Regular: Regular,
       });
+
     console.log(newEvent);
+    // addEvent(newEvent);
   };
 
   return (

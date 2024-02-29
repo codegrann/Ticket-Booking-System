@@ -80,6 +80,11 @@ function App() {
   const [bookedEventsCount, setBookedEventsCount] = useState(
     bookedEvents.length
   );
+  // MANAGING ADMIN EVENTS
+  // adding an event
+  const addEvent = (event) => {
+    setEvents(...events, event);
+  };
 
   // MANAGING USER EVENTS
   const addToMyEvents = (event) => {
@@ -134,7 +139,10 @@ function App() {
             />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/signin" element={<SignIn />} />
-            <Route path="/admin" element={<Admin events={events} />} />
+            <Route
+              path="/admin"
+              element={<Admin events={events} addEvent={addEvent} />}
+            />
             <Route
               path="/profile"
               element={
