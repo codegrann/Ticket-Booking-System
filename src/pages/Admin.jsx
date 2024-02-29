@@ -20,14 +20,19 @@ function Admin({ events }) {
   };
   const addEventToList = (e) => {
     e.preventDefault();
-    setNewEvent({ name: name, date: date, location: VIP, Regular: Regular });
+    setNewEvent({
+      name: eventName,
+      date: date,
+      location: VIP,
+      Regular: Regular,
+    });
     console.log(newEvent);
   };
 
   return (
     <div className="my-8">
       <h3 className="text-lg font-semibold">Welcome Administrator</h3>
-      <p className="text-xs font-semibold">Manage your events with ease</p>
+      <p className="text-xs font-semibold mb-4">Manage your events with ease</p>
       <button className="btn btn-primary btn-outline" onClick={openForm}>
         Add event
       </button>
