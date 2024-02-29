@@ -7,9 +7,14 @@ function Admin({ events, addEvent }) {
   const [eventName, setName] = useState("");
   const [date, setDate] = useState("");
   const [location, setLocation] = useState("");
+
   const [VIP, setVIP] = useState("");
   const [Regular, setRegular] = useState("");
   const [newEvent, setNewEvent] = useState({});
+  const tickets = [
+    { type: "VIP", price: VIP },
+    { type: "Regular", price: Regular },
+  ];
 
   const addEventToList = (e) => {
     e.preventDefault();
@@ -19,16 +24,13 @@ function Admin({ events, addEvent }) {
         name: eventName,
         date: date,
         location: location,
-        tickets: [
-          { type: "VIP", price: VIP },
-          { type: "Regular", price: Regular },
-        ],
+        tickets: [...tickets],
         // VIP: VIP,
         // Regular: Regular,
       });
 
     console.log(newEvent);
-    addEvent(newEvent);
+    // addEvent(newEvent);
   };
 
   return (
