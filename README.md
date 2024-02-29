@@ -7,6 +7,6 @@ If > 5 tickets, you can't book more than 5 events.
 
 Handle login as admin/user.
 Show different dashboards for different users.
+change booked seats to display only the type of seat clicked
 
 <!-- Email notification after successfull booking. -->
-<!-- change booked seats to display only the type of seat clicked -->
