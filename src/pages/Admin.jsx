@@ -3,8 +3,15 @@ import EventList from "../components/EventList";
 
 function Admin({ events }) {
   const [addClicked, setAddClicked] = useState(false);
+  cost[(eventName, setName)] = useState("");
+  cost[(date, setDate)] = useState("");
+  cost[(location, setLocation)] = useState("");
+  cost[(VIP, setVIP)] = useState("");
+  cost[(Regular, setRegular)] = useState("");
+  const [newEvent, setNewEvent] = useState({});
   const addEventToList = () => {
     setAddClicked(true);
+    setNewEvent({ name: name, date: date, location: VIP, Regular: Regular });
   };
   return (
     <div className="my-8">
@@ -21,7 +28,7 @@ function Admin({ events }) {
         >
           Cancel
         </button>
-        <form className="flex flex-col min-[500px]:w-7/8  m-auto my-[80px] bg-white pb-[30px] ">
+        <form className="flex flex-col min-[500px]:w-7/8  m-auto my-[10px] bg-white ">
           <div className="mt-[35px] border-none  min-[500px]:w-3/4 md:w-[600px] min-[500px]:mx-auto flex flex-col gap-4  border-2  px-[10px]">
             <div className="flex items-center m-auto w-full bg-[#9dc69d] rounded-md ">
               <input
@@ -30,7 +37,7 @@ function Admin({ events }) {
                 type="text"
                 placeholder="enter event name"
                 required
-                // value={name}
+                value={eventName}
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
@@ -41,7 +48,7 @@ function Admin({ events }) {
                 type="text"
                 placeholder="enter event date"
                 required
-                // value={name}
+                value={date}
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
@@ -52,7 +59,7 @@ function Admin({ events }) {
                 type="text"
                 placeholder="enter event location"
                 required
-                // value={name}
+                value={location}
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
@@ -63,7 +70,7 @@ function Admin({ events }) {
                 type="number"
                 placeholder="enter VIP price"
                 required
-                // value={name}
+                value={VIP}
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
@@ -74,7 +81,7 @@ function Admin({ events }) {
                 type="number"
                 placeholder="enter Regular price"
                 required
-                // value={name}
+                value={Regular}
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
