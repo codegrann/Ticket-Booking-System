@@ -17,7 +17,7 @@ function Hero() {
             className="w-full h-full border-2"
           />
         </div>
-        <div className="text-[15px] space-y-4 md:w-1/2">
+        <div className="text-[15px] space-y-4 md:w-1/2 lg:text-lg">
           <p>
             Discover and book the best events in town with ease. Whether you're
             looking for live meetups, thrilling workshops, or captivating
