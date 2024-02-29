@@ -2058,6 +2058,16 @@ html {
   padding-bottom: 5px;
 }
 
+.py-0 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
 .pb-\[30px\] {
   padding-bottom: 30px;
 }

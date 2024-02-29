@@ -17,25 +17,68 @@ function Admin({ events }) {
       <>
         <button
           onClick={() => setAddClicked(false)}
-          className="btn btn-error ml-4"
+          className="btn btn-error ml-4 py-2 px-2"
         >
           Cancel
         </button>
-        <form>
-          <div className="flex items-center m-auto w-full bg-[#9dc69d] rounded-md ">
-            <input
-              className="caret-red-700 py-4 bg-transparent input input-sm md:py-6  w-full max-w-xs md:input-md md:max-w-xl focus:outline-none"
-              // className="w-[400px] h-[50px] bg-transparent border-none outline-none text-[#797979] text-md"
-              type="email"
-              placeholder="Email"
-              required
-              // value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
+        <form className="flex flex-col min-[500px]:w-7/8  m-auto my-[80px] bg-white pb-[30px] ">
+          <div className="mt-[35px] border-none  min-[500px]:w-3/4 md:w-[600px] min-[500px]:mx-auto flex flex-col gap-4  border-2  px-[10px]">
+            <div className="flex items-center m-auto w-full bg-[#9dc69d] rounded-md ">
+              <input
+                className="caret-red-700 py-4 bg-transparent input input-sm md:py-6  w-full max-w-xs md:input-md md:max-w-xl focus:outline-none"
+                // className="w-[400px] h-[50px] bg-transparent border-none outline-none text-[#797979] text-md"
+                type="text"
+                placeholder="enter event name"
+                required
+                // value={name}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+            <div className="flex items-center m-auto w-full bg-[#9dc69d] rounded-md ">
+              <input
+                className="caret-red-700 py-4 bg-transparent input input-sm md:py-6  w-full max-w-xs md:input-md md:max-w-xl focus:outline-none"
+                // className="w-[400px] h-[50px] bg-transparent border-none outline-none text-[#797979] text-md"
+                type="text"
+                placeholder="enter event date"
+                required
+                // value={name}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+            <div className="flex items-center m-auto w-full bg-[#9dc69d] rounded-md ">
+              <input
+                className="caret-red-700 py-4 bg-transparent input input-sm md:py-6  w-full max-w-xs md:input-md md:max-w-xl focus:outline-none"
+                // className="w-[400px] h-[50px] bg-transparent border-none outline-none text-[#797979] text-md"
+                type="text"
+                placeholder="enter event location"
+                required
+                // value={name}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+            <div className="flex items-center m-auto w-full bg-[#9dc69d] rounded-md ">
+              <input
+                className="caret-red-700 py-4 bg-transparent input input-sm md:py-6  w-full max-w-xs md:input-md md:max-w-xl focus:outline-none"
+                // className="w-[400px] h-[50px] bg-transparent border-none outline-none text-[#797979] text-md"
+                type="number"
+                placeholder="enter VIP price"
+                required
+                // value={name}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+            <div className="flex items-center m-auto w-full bg-[#9dc69d] rounded-md ">
+              <input
+                className="caret-red-700 py-4 bg-transparent input input-sm md:py-6  w-full max-w-xs md:input-md md:max-w-xl focus:outline-none"
+                // className="w-[400px] h-[50px] bg-transparent border-none outline-none text-[#797979] text-md"
+                type="number"
+                placeholder="enter Regular price"
+                required
+                // value={name}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
           </div>
-          <input type="text" placeholder="enter event name" />
-          <input type="text" placeholder="enter event date" />
-          <input type="text" placeholder="enter event location" />
         </form>
       </>
       {/* )} */}
