@@ -83,7 +83,7 @@ function App() {
   // MANAGING ADMIN EVENTS
   // adding an event
   const addEvent = (event) => {
-    setEvents(...events, event);
+    setEvents([...events, event]);
   };
 
   // MANAGING USER EVENTS
@@ -108,6 +108,7 @@ function App() {
     setShowModal(true);
   };
   const closeModal = () => setShowModal(false);
+  // END OF USER EVENTS
 
   return (
     <>
