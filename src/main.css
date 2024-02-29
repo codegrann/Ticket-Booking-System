@@ -1792,6 +1792,11 @@ html {
   margin-bottom: 2rem;
 }
 
+.my-\[10px\] {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .my-\[30px\] {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -1800,11 +1805,6 @@ html {
 .my-\[80px\] {
   margin-top: 80px;
   margin-bottom: 80px;
-}
-
-.my-\[10px\] {
-  margin-top: 10px;
-  margin-bottom: 10px;
 }
 
 .mb-2 {
@@ -2063,26 +2063,12 @@ html {
   padding-bottom: 5px;
 }
 
-.py-0 {
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
-
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-
 .pb-\[30px\] {
   padding-bottom: 30px;
 }
 
 .pl-3 {
   padding-left: 0.75rem;
-}
-
-.pb-\[5px\] {
-  padding-bottom: 5px;
 }
 
 .text-center {
