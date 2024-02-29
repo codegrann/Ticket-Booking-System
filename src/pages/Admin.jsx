@@ -3,21 +3,32 @@ import EventList from "../components/EventList";
 
 function Admin({ events }) {
   const [addClicked, setAddClicked] = useState(false);
-  cost[(eventName, setName)] = useState("");
-  cost[(date, setDate)] = useState("");
-  cost[(location, setLocation)] = useState("");
-  cost[(VIP, setVIP)] = useState("");
-  cost[(Regular, setRegular)] = useState("");
+  const [eventName, setName] = useState("");
+  const [date, setDate] = useState("");
+  const [location, setLocation] = useState("");
+  const [VIP, setVIP] = useState("");
+  const [Regular, setRegular] = useState("");
   const [newEvent, setNewEvent] = useState({});
-  const addEventToList = () => {
+  const openForm = () => {
     setAddClicked(true);
-    setNewEvent({ name: name, date: date, location: VIP, Regular: Regular });
+    setNewEvent(...newEvent, {
+      name: name,
+      date: date,
+      location: VIP,
+      Regular: Regular,
+    });
   };
+  const addEventToList = (e) => {
+    e.preventDefault();
+    setNewEvent({ name: name, date: date, location: VIP, Regular: Regular });
+    console.log(newEvent);
+  };
+
   return (
     <div className="my-8">
       <h3 className="text-lg font-semibold">Welcome Administrator</h3>
       <p className="text-xs font-semibold">Manage your events with ease</p>
-      <button className="btn btn-primary btn-outline" onClick={addEventToList}>
+      <button className="btn btn-primary btn-outline" onClick={openForm}>
         Add event
       </button>
       {/* {addClicked && ( */}
@@ -38,7 +49,7 @@ function Admin({ events }) {
                 placeholder="enter event name"
                 required
                 value={eventName}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => setName(e.target.value)}
               />
             </div>
             <div className="flex items-center m-auto w-full bg-[#9dc69d] rounded-md ">
@@ -46,10 +57,10 @@ function Admin({ events }) {
                 className="caret-red-700 py-4 bg-transparent input input-sm md:py-6  w-full max-w-xs md:input-md md:max-w-xl focus:outline-none"
                 // className="w-[400px] h-[50px] bg-transparent border-none outline-none text-[#797979] text-md"
                 type="text"
-                placeholder="enter event date"
+                placeholder="enter event date dd/mm/yyyy"
                 required
                 value={date}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => setDate(e.target.value)}
               />
             </div>
             <div className="flex items-center m-auto w-full bg-[#9dc69d] rounded-md ">
@@ -60,7 +71,7 @@ function Admin({ events }) {
                 placeholder="enter event location"
                 required
                 value={location}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => setLocation(e.target.value)}
               />
             </div>
             <div className="flex items-center m-auto w-full bg-[#9dc69d] rounded-md ">
@@ -71,7 +82,7 @@ function Admin({ events }) {
                 placeholder="enter VIP price"
                 required
                 value={VIP}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => setVIP(e.target.value)}
               />
             </div>
             <div className="flex items-center m-auto w-full bg-[#9dc69d] rounded-md ">
@@ -82,9 +93,15 @@ function Admin({ events }) {
                 placeholder="enter Regular price"
                 required
                 value={Regular}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => setRegular(e.target.value)}
               />
             </div>
+            <button
+              className="btn btn-primary btn-outline"
+              onClick={addEventToList}
+            >
+              Save
+            </button>
           </div>
         </form>
       </>
