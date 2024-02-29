@@ -11,12 +11,6 @@ function Admin({ events }) {
   const [newEvent, setNewEvent] = useState({});
   const openForm = () => {
     setAddClicked(true);
-    setNewEvent(...newEvent, {
-      name: name,
-      date: date,
-      location: VIP,
-      Regular: Regular,
-    });
   };
   const addEventToList = (e) => {
     e.preventDefault();
