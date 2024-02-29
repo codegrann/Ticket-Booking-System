@@ -131,7 +131,7 @@ function App() {
             />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/signin" element={<SignIn />} />
-            <Route path="/admin" element={<Admin />} />
+            <Route path="/admin" element={<Admin events={events} />} />
             <Route
               path="/profile"
               element={
