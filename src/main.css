@@ -1787,6 +1787,11 @@ html {
   margin-bottom: 2.5rem;
 }
 
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .my-\[30px\] {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -1797,17 +1802,16 @@ html {
   margin-bottom: 80px;
 }
 
-.my-8 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
 .mb-2 {
   margin-bottom: 0.5rem;
 }
 
 .mb-4 {
   margin-bottom: 1rem;
+}
+
+.ml-4 {
+  margin-left: 1rem;
 }
 
 .ml-\[10px\] {
@@ -1832,10 +1836,6 @@ html {
 
 .mt-\[35px\] {
   margin-top: 35px;
-}
-
-.ml-4 {
-  margin-left: 1rem;
 }
 
 .flex {
