@@ -15,7 +15,9 @@ function Admin({ events }) {
       </button>
       {addClicked && (
         <>
-          <button onClick={() => setAddClicked(false)}>Cancel</button>
+          <button onClick={() => setAddClicked(false)} className="ml-4">
+            Cancel
+          </button>
           <form>
             <input type="text" placeholder="enter event name" />
             <input type="text" placeholder="enter event date" />
