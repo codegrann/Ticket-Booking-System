@@ -9,3 +9,4 @@ Admin to add/remove/edit event to eventlist, maximum no. of attendees.
 Handle login as admin/user.
 Show different dashboards for different users.
 Email notification after successfull booking.
+change booked seats to display only the type of seat clicked
