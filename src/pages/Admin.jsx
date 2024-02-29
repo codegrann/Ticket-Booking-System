@@ -19,12 +19,16 @@ function Admin({ events, addEvent }) {
         name: eventName,
         date: date,
         location: location,
-        VIP: VIP,
-        Regular: Regular,
+        tickets: [
+          { type: "VIP", price: VIP },
+          { type: "Regular", price: Regular },
+        ],
+        // VIP: VIP,
+        // Regular: Regular,
       });
 
     console.log(newEvent);
-    // addEvent(newEvent);
+    addEvent(newEvent);
   };
 
   return (
