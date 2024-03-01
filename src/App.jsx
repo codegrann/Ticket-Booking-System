@@ -110,7 +110,7 @@ function App() {
     setBookedEventsCount(bookedEventsCount + 1);
 
     setBookedEvents([...bookedEvents, event]);
-    alert("Details of your ticket have been sent to your email");
+    // alert("Details of your ticket have been sent to your email");
   };
   const removeFromMyEvents = (event) => {
     console.log("removed");
