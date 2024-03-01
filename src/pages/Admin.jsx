@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import EventList from "../components/EventList";
 import { useNavigate } from "react-router-dom";
 
-function Admin({ events, addEvent }) {
+function Admin({ events, addEvent, removeEvent, role }) {
   const [addClicked, setAddClicked] = useState(false);
   const [id, setId] = useState("");
   const [eventName, setName] = useState("");
@@ -139,7 +139,7 @@ function Admin({ events, addEvent }) {
           </form>
         </>
       )}
-      <EventList events={events} />
+      <EventList events={events} role={role} />
     </div>
   );
 }

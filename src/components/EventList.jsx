@@ -1,7 +1,14 @@
 import React from "react";
 import EventCard from "./EventCard";
 
-function EventList({ bookTicket, events, selectedTicket }) {
+function EventList({
+  bookTicket,
+  events,
+  selectedTicket,
+  role,
+  // removeEvent,
+  // removeFromMyEvents,
+}) {
   return (
     <div className="my-10">
       <h3 className="text-black font-medium md:text-xl mb-4">
@@ -14,6 +21,9 @@ function EventList({ bookTicket, events, selectedTicket }) {
             event={event}
             bookTicket={bookTicket}
             selectedTicket={selectedTicket}
+            role={role}
+            // removeEvent={removeEvent}
+            // removeFromMyEvents={removeFromMyEvents}
           />
         ))}
       </div>

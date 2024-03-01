@@ -9,6 +9,6 @@ removeFromMyEvents in my events when "not going" is clicked
 <!-- Handle login as admin/user. -->
 <!-- Show different dashboards for different users. -->
 
-change booked seats to display only the type of seat clicked
+<!-- change booked seats to display only the type of seat clicked -->
 
 <!-- Email notification after successfull booking. -->

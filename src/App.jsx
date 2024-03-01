@@ -97,6 +97,9 @@ function App() {
   const addEvent = (event) => {
     setEvents([...events, event]);
   };
+  // const removeEvent = (events) => {
+  //   setEvents(events.filter((e) => e.id !== selectedTicket.id));
+  // };
 
   // MANAGING USER EVENTS
   const addToMyEvents = (event) => {
@@ -137,6 +140,9 @@ function App() {
                     bookTicket={bookTicket}
                     events={events}
                     selectedTicket={selectedTicket}
+                    role={role}
+                    // removeEvent={removeEvent}
+                    // removeFromMyEvents={removeFromMyEvents}
                   />
                   {showModal && (
                     <Modal
@@ -157,7 +163,13 @@ function App() {
             />
             <Route
               path="/admin"
-              element={<Admin events={events} addEvent={addEvent} />}
+              element={
+                <Admin
+                  events={events}
+                  addEvent={addEvent}
+                  // removeEvent={removeEvent}
+                />
+              }
             />
             <Route
               path="/client"

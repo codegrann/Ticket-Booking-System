@@ -2,7 +2,14 @@ import React from "react";
 // import PropTypes from "prop-types";
 import { Link } from "react-router-dom"; // Assuming you're using React Router for navigation
 
-function EventCard({ event, bookTicket, selectedTicket }) {
+function EventCard({
+  event,
+  bookTicket,
+  selectedTicket,
+  role,
+  // removeEvent,
+  // removeFromMyEvents,
+}) {
   const { id, name, date, location, tickets } = event;
 
   return (
@@ -26,13 +33,33 @@ function EventCard({ event, bookTicket, selectedTicket }) {
           </li>
         ))}
       </ul>
-      <Link
-        // to={`/events/${id}/book`}
-        className="btn btn-outline"
-        onClick={() => bookTicket(event)}
-      >
-        Book Now
-      </Link>
+      {role == "ADMIN" && (
+        <Link
+          // to={`/events/${id}/book`}
+          className="btn btn-error btn-outline"
+          // onClick={() => removeEvent(event)}
+        >
+          Remove event
+        </Link>
+      )}
+      {role == "CLIENT" && (
+        <Link
+          // to={`/events/${id}/book`}
+          className="btn btn-outline"
+          onClick={() => bookTicket(event)}
+        >
+          Book Now
+        </Link>
+      )}
+      {role == "" && (
+        <Link
+          // to={`/events/${id}/book`}
+          className="btn btn-outline"
+          onClick={() => bookTicket(event)}
+        >
+          Book Now
+        </Link>
+      )}
     </div>
   );
 }
