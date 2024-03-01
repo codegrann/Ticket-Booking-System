@@ -67,7 +67,7 @@ const Navbar = ({ role, setRole }) => {
               <li
                 className="border-2 cursor-pointer w-16 md:w-8"
                 onClick={() => {
-                  navigate("/profile");
+                  navigate("/client");
                 }}
               >
                 <ImageContainer imageurl="/person.png" size={10} />
