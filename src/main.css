@@ -2229,6 +2229,10 @@ html {
     margin-bottom: 6rem;
   }
 
+  .md\:ml-0 {
+    margin-left: 0px;
+  }
+
   .md\:w-1\/2 {
     width: 50%;
   }
@@ -2288,6 +2292,10 @@ html {
 }
 
 @media (min-width: 1024px) {
+  .lg\:ml-0 {
+    margin-left: 0px;
+  }
+
   .lg\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
