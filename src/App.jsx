@@ -103,11 +103,11 @@ function App() {
 
   // MANAGING USER EVENTS
   const addToMyEvents = (event) => {
+    // if (bookedEventsCount > 5) {
+    //   alert("You can only book 5 events at a time");
+    //   return;
+    // }
     setBookedEventsCount(bookedEventsCount + 1);
-    if (bookedEventsCount > 5) {
-      alert("You can only book 5 events at a time");
-      return;
-    }
 
     setBookedEvents([...bookedEvents, event]);
   };

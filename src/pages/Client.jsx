@@ -11,7 +11,7 @@ function Client({
   // console.log();
 
   return (
-    <div className="h-screen">
+    <div className="min-h-screen">
       <div>{bookedEventsCount} events booked </div>
       <MyEventsList
         bookedEvents={bookedEvents}
