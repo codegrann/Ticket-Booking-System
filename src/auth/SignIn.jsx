@@ -14,7 +14,11 @@ const SignIn = () => {
     const role = prompt("Enter your role: admin or client");
     const roleUpper = role.toUpperCase();
     console.log(roleUpper);
-    alert(`logged in as ${role}`);
+
+    if (roleUpper == "ADMIN" || roleUpper == "CLIENT") {
+      alert(`logged in as ${roleUpper}`);
+    }
+    alert("Enter valid role");
     // navigate("/");
   };
 
