@@ -43,7 +43,7 @@ function Admin({ events, addEvent }) {
         Manage your events with ease
       </p>
       <button
-        className="btn btn-primary btn-outline ml-auto"
+        className="btn btn-primary btn-outline mx-auto"
         onClick={() => setAddClicked(true)}
       >
         Add event
@@ -56,7 +56,7 @@ function Admin({ events, addEvent }) {
           >
             Cancel
           </button>
-          <form className="flex flex-col min-[500px]:w-7/8  m-auto my-[10px] bg-white  border-2 border-red-600 ">
+          <form className="flex flex-col min-[500px]:w-7/8  m-auto my-[10px] bg-white  border-2 border-gray-300 pb-4">
             <div className="mt-[35px] border-none  min-[500px]:w-3/4 md:w-[600px] min-[500px]:mx-auto flex flex-col gap-4  border-2 border-red-600  px-[10px]">
               <div className="flex items-center mx-auto w-full bg-[#9dc69d] rounded-md ">
                 <input
