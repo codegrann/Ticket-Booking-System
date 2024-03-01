@@ -10,14 +10,14 @@ import "./Navbar.css";
 import Hamburger from "../assets/Hamburger";
 import Logo from "./Logo";
 
-const Navbar = () => {
+const Navbar = ({ role }) => {
   const [showNavbar, setShowNavbar] = useState(false);
   const navigate = useNavigate();
 
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar);
   };
-  const logOut = () => {
+  const logOut = ({ setRole }) => {
     alert("logged out successfully");
   };
 
@@ -41,32 +41,38 @@ const Navbar = () => {
             <li onClick={() => navigate("/")} className="cursor-pointer">
               Events
             </li>
-            <li
-              id="getstarted"
-              className="btn btn-success btn-outline"
-              onClick={() => {
-                navigate("/signin");
-              }}
-            >
-              <span className="font-semibold">Get started</span>
-            </li>
-            <li
-              className="border-2 cursor-pointer w-16 md:w-8"
-              onClick={() => {
-                navigate("/profile");
-              }}
-            >
-              <ImageContainer imageurl="/person.png" size={10} />
-            </li>
-            <li
-              className="border-2 cursor-pointer w-16 md:w-8"
-              onClick={() => {
-                navigate("/admin");
-              }}
-            >
-              <ImageContainer imageurl="/person.png" size={10} />
-            </li>
-            <li onClick={logOut}>Log out</li>
+            {role == "" && (
+              <li
+                id="getstarted"
+                className="btn btn-success btn-outline"
+                onClick={() => {
+                  navigate("/signin");
+                }}
+              >
+                <span className="font-semibold">Get started</span>
+              </li>
+            )}
+            {role == "ADMIN" && (
+              <li
+                className="border-2 cursor-pointer w-16 md:w-8"
+                onClick={() => {
+                  navigate("/admin");
+                }}
+              >
+                <ImageContainer imageurl="/person.png" size={10} />
+              </li>
+            )}
+            {role == "CLIENT" && (
+              <li
+                className="border-2 cursor-pointer w-16 md:w-8"
+                onClick={() => {
+                  navigate("/profile");
+                }}
+              >
+                <ImageContainer imageurl="/person.png" size={10} />
+              </li>
+            )}
+            {role != "" && <li onClick={logOut}>Log out</li>}
           </ul>
         </div>
       </div>

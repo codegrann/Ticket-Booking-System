@@ -85,8 +85,8 @@ function App() {
   const [role, setRole] = useState("");
 
   const handleSignIn = (role) => {
-    setRole(role);
-    console.log(role);
+    // setRole(role);
+    // console.log(role);
   };
 
   const [bookedEventsCount, setBookedEventsCount] = useState(
@@ -125,7 +125,7 @@ function App() {
   return (
     <>
       <Router>
-        <Navbar />
+        <Navbar role={role} setRole={setRole} />
         <div className="px-4 md:px-10 text-sm">
           <Routes>
             <Route
