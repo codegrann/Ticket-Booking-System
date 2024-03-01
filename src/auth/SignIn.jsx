@@ -11,8 +11,10 @@ const SignIn = () => {
 
   const handleSignin = (e) => {
     e.preventDefault();
-    prompt("Choose role: ADMIN/CLIENT");
-    alert("login successfull");
+    const role = prompt("Enter your role: admin or client");
+    const roleUpper = role.toUpperCase();
+    console.log(roleUpper);
+    alert(`logged in as ${role}`);
     // navigate("/");
   };
 
@@ -24,7 +26,7 @@ const SignIn = () => {
       >
         <div className="flex flex-col items-center gap-2 w-full mt-[30px]  ">
           <div className="text-[#10Bb32]text-sm md:text-3xl font-medium">
-            Sign In(Admi/User)
+            Sign In(Admin/User)
           </div>
           <div className="w-[61px] h-[6px] bg-[#10Bb32] rounded-md"></div>
         </div>
