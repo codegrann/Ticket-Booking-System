@@ -4,28 +4,30 @@ import { useNavigate } from "react-router-dom";
 import emailIcon from "/email.png";
 import passwordIcon from "/password.png";
 
-const SignIn = () => {
+const SignIn = ({ handleSignin, setRole }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleSignin = (e) => {
+  const handleUserSignin = (e) => {
     e.preventDefault();
     const role = prompt("Enter your role: admin or client");
+    const roleLower = role.toLowerCase();
     const roleUpper = role.toUpperCase();
     console.log(roleUpper);
-
-    if (roleUpper == "ADMIN" || roleUpper == "CLIENT") {
-      alert(`logged in as ${roleUpper}`);
-    }
-    alert("Enter valid role");
-    // navigate("/");
+    // handleSignin(roleUpper);
+    setRole(roleUpper);
+    // if (roleUpper == "ADMIN" || roleUpper == "CLIENT") {
+    alert(`logged in as ${roleUpper}`);
+    // }
+    // alert("Enter valid role");
+    navigate(`/${roleLower}`);
   };
 
   return (
     <>
       <form
-        onSubmit={handleSignin}
+        onSubmit={handleUserSignin}
         className="flex flex-col min-[500px]:w-7/8  m-auto my-[80px] bg-white pb-[30px] "
       >
         <div className="flex flex-col items-center gap-2 w-full mt-[30px]  ">
@@ -84,10 +86,16 @@ const SignIn = () => {
             Sign Up
           </div>
           <button
+            type="submit"
             className="flex justify-center items-center px-[20px] py-[5px]  text-[#fff] bg-[#10Bb32] rounded-lg text-sm md:text-lg font-medium cursor-pointer"
-            onClick={() => {
-              handleSignin;
-            }}
+            // onClick={(e) => {
+            //   e.preventDefault();
+            //   const role = prompt("Enter your role: admin or client");
+            //   const roleUpper = role.toUpperCase();
+            //   console.log(roleUpper);
+            //   alert(`logged in as ${roleUpper}`);
+            //   handleUserSignin(role);
+            // }}
           >
             Sign In
           </button>

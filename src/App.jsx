@@ -80,10 +80,14 @@ function App() {
   // HANDLE SIGN IN
   const [user, setUser] = useState({
     email: "",
-    isAdmin: false,
+    role: "",
   });
+  const [role, setRole] = useState("");
 
-  const handleSignIn = (user) => {};
+  const handleSignIn = (role) => {
+    setRole(role);
+    console.log(role);
+  };
 
   const [bookedEventsCount, setBookedEventsCount] = useState(
     bookedEvents.length
@@ -147,7 +151,10 @@ function App() {
               }
             />
             <Route path="/signup" element={<SignUp />} />
-            <Route path="/signin" element={<SignIn />} />
+            <Route
+              path="/signin"
+              element={<SignIn handleSignIn={handleSignIn} setRole={setRole} />}
+            />
             <Route
               path="/admin"
               element={<Admin events={events} addEvent={addEvent} />}
