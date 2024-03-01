@@ -36,10 +36,14 @@ function Admin({ events, addEvent }) {
 
   return (
     <div className="my-8">
-      <h3 className="text-lg font-semibold">Welcome Administrator</h3>
-      <p className="text-xs font-semibold mb-4">Manage your events with ease</p>
+      <h3 className="text-lg font-semibold text-center">
+        Welcome Administrator
+      </h3>
+      <p className="text-xs font-semibold mb-4 text-center">
+        Manage your events with ease
+      </p>
       <button
-        className="btn btn-primary btn-outline"
+        className="btn btn-primary btn-outline ml-auto"
         onClick={() => setAddClicked(true)}
       >
         Add event
@@ -52,9 +56,9 @@ function Admin({ events, addEvent }) {
           >
             Cancel
           </button>
-          <form className="flex flex-col min-[500px]:w-7/8  m-auto my-[10px] bg-white">
-            <div className="mt-[35px] border-none  min-[500px]:w-3/4 md:w-[600px] min-[500px]:mx-auto flex flex-col gap-4  border-2  px-[10px]">
-              <div className="flex items-center mx-auto lg:ml-0 w-full bg-[#9dc69d] rounded-md ">
+          <form className="flex flex-col min-[500px]:w-7/8  m-auto my-[10px] bg-white  border-2 border-red-600 ">
+            <div className="mt-[35px] border-none  min-[500px]:w-3/4 md:w-[600px] min-[500px]:mx-auto flex flex-col gap-4  border-2 border-red-600  px-[10px]">
+              <div className="flex items-center mx-auto w-full bg-[#9dc69d] rounded-md ">
                 <input
                   className="caret-red-700 py-4 bg-transparent input input-sm md:py-6  w-full max-w-xs md:input-md md:max-w-xl focus:outline-none"
                   // className="w-[400px] h-[50px] bg-transparent border-none outline-none text-[#797979] text-md"

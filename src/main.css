@@ -1843,6 +1843,10 @@ html {
   margin-top: 35px;
 }
 
+.ml-auto {
+  margin-left: auto;
+}
+
 .flex {
   display: flex;
 }
@@ -1980,6 +1984,11 @@ html {
 
 .border-none {
   border-style: none;
+}
+
+.border-red-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(220 38 38 / var(--tw-border-opacity));
 }
 
 .bg-\[\#10Bb32\] {
@@ -2229,10 +2238,6 @@ html {
     margin-bottom: 6rem;
   }
 
-  .md\:ml-0 {
-    margin-left: 0px;
-  }
-
   .md\:w-1\/2 {
     width: 50%;
   }
@@ -2292,8 +2297,8 @@ html {
 }
 
 @media (min-width: 1024px) {
-  .lg\:ml-0 {
-    margin-left: 0px;
+  .lg\:items-start {
+    align-items: flex-start;
   }
 
   .lg\:text-lg {
