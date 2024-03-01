@@ -160,7 +160,7 @@ function App() {
               element={<Admin events={events} addEvent={addEvent} />}
             />
             <Route
-              path="/profile"
+              path="/client"
               element={
                 <Client
                   user={user}

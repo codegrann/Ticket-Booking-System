@@ -18,10 +18,10 @@ const SignIn = ({ handleSignin, setRole }) => {
     // handleSignin(roleUpper);
     setRole(roleUpper);
     // if (roleUpper == "ADMIN" || roleUpper == "CLIENT") {
+    navigate(`/${roleLower}`);
     alert(`logged in as ${roleUpper}`);
     // }
     // alert("Enter valid role");
-    navigate(`/${roleLower}`);
   };
 
   return (

@@ -10,14 +10,15 @@ import "./Navbar.css";
 import Hamburger from "../assets/Hamburger";
 import Logo from "./Logo";
 
-const Navbar = ({ role }) => {
+const Navbar = ({ role, setRole }) => {
   const [showNavbar, setShowNavbar] = useState(false);
   const navigate = useNavigate();
 
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar);
   };
-  const logOut = ({ setRole }) => {
+  const logOut = () => {
+    setRole("");
     alert("logged out successfully");
   };
 
