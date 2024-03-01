@@ -1,14 +1,22 @@
-TO DO's
-Admin to add/remove/edit event to eventlist, maximum no. of attendees.
-removeFromMyEvents in my events when "not going" is clicked
+# Ticket Booking System
 
-If > 5 tickets, you can't book more than 5 events.
+## Tools used
 
-<!-- setShowNavbar to false when hamburger is clicked -->
+- Setup using vite
+- Languages & Libraries used: JavaScript, Reactjs, Taiwlindcss, daisyui
 
-<!-- Handle login as admin/user. -->
-<!-- Show different dashboards for different users. -->
+## Running application locally
 
-<!-- change booked seats to display only the type of seat clicked -->
+```bash
+git clone
+```
 
-<!-- Email notification after successfull booking. -->
+```bash
+cd ticket-booking-system && npm install
+```
+
+```bash
+npm run dev
+```
+
+Serves at [localhost://5173](http://localhost:5173/)
