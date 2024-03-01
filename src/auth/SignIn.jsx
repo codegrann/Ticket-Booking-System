@@ -9,7 +9,7 @@ const SignIn = ({ handleSignin, setRole }) => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleUserSignin = (e) => {
+  const handleUserSignin = async (e) => {
     e.preventDefault();
     const role = prompt("Enter your role: admin or client");
     const roleLower = role.toLowerCase();
@@ -17,11 +17,11 @@ const SignIn = ({ handleSignin, setRole }) => {
     console.log(roleUpper);
     // handleSignin(roleUpper);
     setRole(roleUpper);
-    if (roleUpper !== "ADMIN" || roleUpper !== "CLIENT") {
-      alert("Enter valid role");
-      navigate("/signin");
-      return;
-    }
+    // if (roleUpper != "ADMIN" || roleUpper != "CLIENT") {
+    // alert("Enter valid role");
+    // navigate("/signin");
+    // return;
+    // }
     navigate(`/${roleLower}`);
     alert(`logged in as ${roleUpper}`);
   };
