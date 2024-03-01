@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import EventList from "../components/EventList";
+import { useNavigate } from "react-router-dom";
 
 function Admin({ events, addEvent }) {
   const [addClicked, setAddClicked] = useState(false);
@@ -16,6 +17,8 @@ function Admin({ events, addEvent }) {
     { type: "Regular", price: Regular },
   ];
 
+  // const navigate = useNavigate();
+
   const addEventToList = (e) => {
     e.preventDefault();
     addClicked &&
@@ -31,7 +34,9 @@ function Admin({ events, addEvent }) {
 
     console.log(newEvent);
     alert("Added event successfully");
+
     // addEvent(newEvent);
+    setAddClicked(false);
   };
 
   return (
