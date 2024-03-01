@@ -17,11 +17,13 @@ const SignIn = ({ handleSignin, setRole }) => {
     console.log(roleUpper);
     // handleSignin(roleUpper);
     setRole(roleUpper);
-    // if (roleUpper == "ADMIN" || roleUpper == "CLIENT") {
+    if (roleUpper !== "ADMIN" || roleUpper !== "CLIENT") {
+      alert("Enter valid role");
+      navigate("/signin");
+      return;
+    }
     navigate(`/${roleLower}`);
     alert(`logged in as ${roleUpper}`);
-    // }
-    // alert("Enter valid role");
   };
 
   return (

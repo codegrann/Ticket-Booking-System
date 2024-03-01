@@ -19,6 +19,7 @@ const Navbar = ({ role, setRole }) => {
   };
   const logOut = () => {
     setRole("");
+    navigate("/");
     alert("logged out successfully");
   };
 
