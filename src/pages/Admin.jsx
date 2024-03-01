@@ -30,6 +30,7 @@ function Admin({ events, addEvent }) {
       });
 
     console.log(newEvent);
+    alert("Added event successfully");
     // addEvent(newEvent);
   };
 
