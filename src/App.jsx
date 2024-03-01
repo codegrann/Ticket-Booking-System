@@ -13,7 +13,6 @@ import Modal from "./components/Modal";
 function App() {
   const [showModal, setShowModal] = useState(false);
   const [selectedTicket, setSelectedTicket] = useState({});
-  const [user, setUser] = useState({ name: "user 1" });
   const [events, setEvents] = useState([
     {
       id: "rbn27",
@@ -77,6 +76,15 @@ function App() {
     },
   ]);
   const [bookedEvents, setBookedEvents] = useState([]);
+
+  // HANDLE SIGN IN
+  const [user, setUser] = useState({
+    email: "",
+    isAdmin: false,
+  });
+
+  const handleSignIn = (user) => {};
+
   const [bookedEventsCount, setBookedEventsCount] = useState(
     bookedEvents.length
   );
