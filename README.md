@@ -8,11 +8,11 @@
 ## Running application locally
 
 ```bash
-git clone
+git clone git@github.com:codegrann/Ticket-Booking-System.git
 ```
 
 ```bash
-cd ticket-booking-system && npm install
+cd Ticket-Booking-System && npm install
 ```
 
 ```bash
