@@ -11,7 +11,7 @@ const Modal = ({
   const navigate = useNavigate();
   const goToMyEvents = () => {
     closeModal();
-    navigate("/profile");
+    navigate("/client");
   };
   const handleTicketTypeSelection = (type) => {
     console.log(`Selected ticket type: ${type}`);

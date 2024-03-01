@@ -12,9 +12,7 @@ function Client({
 
   return (
     <div className="h-screen border-2 border-red-500">
-      <div>
-        {role} {bookedEventsCount}
-      </div>
+      <div>{bookedEventsCount} events booked </div>
       <MyEventsList
         bookedEvents={bookedEvents}
         removeFromMyEvents={removeFromMyEvents}
