@@ -74,7 +74,11 @@ const Navbar = ({ role, setRole }) => {
                 <ImageContainer imageurl="/person.png" size={10} />
               </li>
             )}
-            {role != "" && <li onClick={logOut}>Log out</li>}
+            {role != "" && (
+              <li onClick={logOut} className="cursor-pointer">
+                Log out
+              </li>
+            )}
           </ul>
         </div>
       </div>

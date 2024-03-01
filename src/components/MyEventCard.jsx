@@ -18,7 +18,7 @@ function MyEventCard({ event, removeFromMyEvents }) {
       <ul className="flex gap-4">
         {tickets.map((ticket) => (
           <li key={ticket.type}>
-            <span>Your seat: </span>
+            <span></span>
             {ticket.type}:{" "}
             <span
               className={
