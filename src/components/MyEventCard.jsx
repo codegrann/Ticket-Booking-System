@@ -2,12 +2,17 @@ import React from "react";
 // import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-function MyEventCard({ event, removeFromMyEvents }) {
+function MyEventCard({
+  event,
+  removeFromMyEvents,
+  setBookeEvents,
+  bookedEvents,
+}) {
   //   console.log(event);
   const { id, name, date, location, tickets } = event;
-  const removeEvent = () => () => {
-    removeFromMyEvents(event);
-  };
+  // const removeEvent = () => () => {
+  // removeFromMyEvents(event);
+  // };
 
   return (
     <div className="border-2 rounded-lg shadow-lg p-4 flex flex-col gap-4 min-w-[290px] max-w-[435px]">
@@ -30,7 +35,10 @@ function MyEventCard({ event, removeFromMyEvents }) {
           </li>
         ))}
       </ul>
-      <button className="btn btn-error text-sm" onClick={removeEvent}>
+      <button
+        className="btn btn-error text-sm"
+        onClick={setBookeEvents(bookedEvents.filter((e) => e.id !== event.id))}
+      >
         Not going
       </button>
     </div>

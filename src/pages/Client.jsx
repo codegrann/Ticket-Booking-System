@@ -4,6 +4,7 @@ import MyEventsList from "../components/MyEventsList";
 function Client({
   user,
   bookedEvents,
+  setBookedEvents,
   removeFromMyEvents,
   bookedEventsCount,
   role,
@@ -15,6 +16,7 @@ function Client({
       <div>{bookedEventsCount} events booked </div>
       <MyEventsList
         bookedEvents={bookedEvents}
+        setBookedEvents={setBookedEvents}
         removeFromMyEvents={removeFromMyEvents}
       />
     </div>

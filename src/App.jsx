@@ -118,11 +118,6 @@ function App() {
     setBookedEventsCount(bookedEventsCount - 1);
     setBookedEvents(bookedEvents.filter((e) => e.id !== event.id));
   };
-  try {
-    removeFromMyEvents(bookedEvents[0]);
-  } catch (error) {
-    console.log(error);
-  }
 
   const bookTicket = (ticket) => {
     setSelectedTicket(ticket);
@@ -184,6 +179,7 @@ function App() {
                 <Client
                   user={user}
                   bookedEvents={bookedEvents}
+                  setBookedEvents={setBookedEvents}
                   removeFromMyEvents={removeFromMyEvents}
                   bookedEventsCount={bookedEventsCount}
                 />
