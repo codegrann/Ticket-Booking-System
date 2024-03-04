@@ -112,12 +112,6 @@ function App() {
     setBookedEvents([...bookedEvents, event]);
     // alert("Details of your ticket have been sent to your email");
   };
-  const removeFromMyEvents = (event) => {
-    console.log("removed");
-    // console.log(bookedEvents.filter((e) => e.id !== event.id));
-    setBookedEventsCount(bookedEventsCount - 1);
-    setBookedEvents(bookedEvents.filter((e) => e.id !== event.id));
-  };
 
   const bookTicket = (ticket) => {
     setSelectedTicket(ticket);
@@ -143,7 +137,6 @@ function App() {
                     selectedTicket={selectedTicket}
                     role={role}
                     // removeEvent={removeEvent}
-                    // removeFromMyEvents={removeFromMyEvents}
                   />
                   {showModal && (
                     <Modal
@@ -181,7 +174,6 @@ function App() {
                   bookedEvents={bookedEvents}
                   setBookedEvents={setBookedEvents}
                   setBookedEventsCount={setBookedEventsCount}
-                  removeFromMyEvents={removeFromMyEvents}
                   bookedEventsCount={bookedEventsCount}
                 />
               }

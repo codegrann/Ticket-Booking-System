@@ -5,7 +5,6 @@ function Client({
   user,
   bookedEvents,
   setBookedEvents,
-  removeFromMyEvents,
   bookedEventsCount,
   setBookedEventsCount,
   role,
@@ -18,7 +17,6 @@ function Client({
       <MyEventsList
         bookedEvents={bookedEvents}
         setBookedEvents={setBookedEvents}
-        removeFromMyEvents={removeFromMyEvents}
         setBookedEventsCount={setBookedEventsCount}
       />
     </div>
