@@ -116,8 +116,13 @@ function App() {
     console.log("removed");
     // console.log(bookedEvents.filter((e) => e.id !== event.id));
     setBookedEventsCount(bookedEventsCount - 1);
-    setBookedEvents([...bookedEvents.filter((e) => e.id !== event.id)]);
+    setBookedEvents(bookedEvents.filter((e) => e.id !== event.id));
   };
+  try {
+    removeFromMyEvents(bookedEvents[0]);
+  } catch (error) {
+    console.log(error);
+  }
 
   const bookTicket = (ticket) => {
     setSelectedTicket(ticket);
