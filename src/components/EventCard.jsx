@@ -59,6 +59,7 @@ function EventCard({
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            className="caret-red-700 py-4 bg-transparent input input-success input-sm md:py-6  w-full max-w-xs md:input-md md:max-w-xl"
           />
         ) : (
           name

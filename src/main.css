@@ -1585,6 +1585,18 @@ html {
   outline-color: var(--fallback-bc,oklch(var(--bc)/0.2));
 }
 
+.input-success {
+  --tw-border-opacity: 1;
+  border-color: var(--fallback-su,oklch(var(--su)/var(--tw-border-opacity)));
+}
+
+.input-success:focus,
+    .input-success:focus-within {
+  --tw-border-opacity: 1;
+  border-color: var(--fallback-su,oklch(var(--su)/var(--tw-border-opacity)));
+  outline-color: var(--fallback-su,oklch(var(--su)/1));
+}
+
 .input-disabled,
   .input:disabled,
   .input[disabled] {
@@ -2312,6 +2324,10 @@ html {
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.focus\:outline-green-500:focus {
+  outline-color: #22c55e;
 }
 
 .disabled\:text-white:disabled {
