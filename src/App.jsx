@@ -116,7 +116,7 @@ function App() {
     console.log("removed");
     // console.log(bookedEvents.filter((e) => e.id !== event.id));
     setBookedEventsCount(bookedEventsCount - 1);
-    setBookedEvents(bookedEvents.filter((e) => e.id !== event.id));
+    setBookedEvents([...bookedEvents.filter((e) => e.id !== event.id)]);
   };
 
   const bookTicket = (ticket) => {
