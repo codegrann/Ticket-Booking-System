@@ -61,7 +61,7 @@ function EventCard({
           Book Now
         </Link>
       )}
-      {role == "" && <p>Login to book</p>}
+      {role == "" && <p className="text-red-500">Login to book</p>}
     </div>
   );
 }
