@@ -6,6 +6,7 @@ function EventList({
   events,
   selectedTicket,
   role,
+  bookedEventsCount,
   // removeEvent,
   // removeFromMyEvents,
 }) {
@@ -22,6 +23,7 @@ function EventList({
             bookTicket={bookTicket}
             selectedTicket={selectedTicket}
             role={role}
+            bookedEventsCount={bookedEventsCount}
             // removeEvent={removeEvent}
             // removeFromMyEvents={removeFromMyEvents}
           />

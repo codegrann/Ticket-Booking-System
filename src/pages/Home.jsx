@@ -7,6 +7,7 @@ function Home({
   events,
   selectedTicket,
   role,
+  bookedEventsCount,
   // removeEvent,
   // removeFromMyEvents,
 }) {
@@ -18,6 +19,7 @@ function Home({
         events={events}
         selectedTicket={selectedTicket}
         role={role}
+        bookedEventsCount={bookedEventsCount}
         // removeEvent={removeEvent}
         // removeFromMyEvents={removeFromMyEvents}
       />

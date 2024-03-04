@@ -132,6 +132,7 @@ function App() {
                     events={events}
                     selectedTicket={selectedTicket}
                     role={role}
+                    bookedEventsCount={bookedEventsCount}
                     // removeEvent={removeEvent}
                   />
                   {showModal && (
