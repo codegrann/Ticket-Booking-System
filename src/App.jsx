@@ -180,6 +180,7 @@ function App() {
                   user={user}
                   bookedEvents={bookedEvents}
                   setBookedEvents={setBookedEvents}
+                  setBookedEventsCount={setBookedEventsCount}
                   removeFromMyEvents={removeFromMyEvents}
                   bookedEventsCount={bookedEventsCount}
                 />

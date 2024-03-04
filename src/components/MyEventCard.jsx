@@ -5,8 +5,9 @@ import { Link } from "react-router-dom";
 function MyEventCard({
   event,
   removeFromMyEvents,
-  setBookedEvents,
   bookedEvents,
+  setBookedEvents,
+  setBookedEventsCount,
 }) {
   //   console.log(event);
   const { id, name, date, location, tickets } = event;
@@ -37,9 +38,10 @@ function MyEventCard({
       </ul>
       <button
         className="btn btn-error text-sm"
-        onClick={() =>
-          setBookedEvents(bookedEvents.filter((e) => e.id !== event.id))
-        }
+        onClick={() => {
+          setBookedEventsCount(bookedEvents.length - 1);
+          setBookedEvents(bookedEvents.filter((e) => e.id !== event.id));
+        }}
       >
         Not going
       </button>

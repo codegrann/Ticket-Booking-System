@@ -1,7 +1,12 @@
 import React from "react";
 import MyEventCard from "./MyEventCard";
 
-function MyEventsList({ bookedEvents, removeFromMyEvents, setBookedEvents }) {
+function MyEventsList({
+  bookedEvents,
+  removeFromMyEvents,
+  setBookedEvents,
+  setBookedEventsCount,
+}) {
   return (
     <div>
       <h3 className="text-black font-medium md:text-xl mb-4">
@@ -15,6 +20,7 @@ function MyEventsList({ bookedEvents, removeFromMyEvents, setBookedEvents }) {
             removeFromMyEvents={removeFromMyEvents}
             bookedEvents={bookedEvents}
             setBookedEvents={setBookedEvents}
+            setBookedEventsCount={setBookedEventsCount}
           />
         ))}
       </div>

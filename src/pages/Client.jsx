@@ -7,6 +7,7 @@ function Client({
   setBookedEvents,
   removeFromMyEvents,
   bookedEventsCount,
+  setBookedEventsCount,
   role,
 }) {
   // console.log();
@@ -18,6 +19,7 @@ function Client({
         bookedEvents={bookedEvents}
         setBookedEvents={setBookedEvents}
         removeFromMyEvents={removeFromMyEvents}
+        setBookedEventsCount={setBookedEventsCount}
       />
     </div>
   );
