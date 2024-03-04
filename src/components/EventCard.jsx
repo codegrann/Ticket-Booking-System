@@ -73,6 +73,7 @@ function EventCard({
               type="text"
               value={date}
               onChange={(e) => setDate(e.target.value)}
+              className="caret-red-700 py-4 bg-transparent input input-success input-sm md:py-6  w-full max-w-xs md:input-md md:max-w-xl"
             />
           ) : (
             date
@@ -85,6 +86,7 @@ function EventCard({
               type="text"
               value={location}
               onChange={(e) => setLocation(e.target.value)}
+              className="caret-red-700 py-4 bg-transparent input input-success input-sm md:py-6  w-full max-w-xs md:input-md md:max-w-xl"
             />
           ) : (
             location
@@ -100,6 +102,7 @@ function EventCard({
                 <input
                   type="text"
                   value={ticket.type}
+                  className="caret-red-700 py-4 bg-transparent input input-success input-sm md:py-6  w-full max-w-xs md:input-md md:max-w-xl"
                   onChange={(e) =>
                     handleTicketChange(index, "type", e.target.value)
                   }
