@@ -2144,6 +2144,11 @@ html {
   line-height: 1rem;
 }
 
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -2154,6 +2159,14 @@ html {
 
 .font-semibold {
   font-weight: 600;
+}
+
+.font-extralight {
+  font-weight: 200;
+}
+
+.italic {
+  font-style: italic;
 }
 
 .text-\[\#10Bb32\] {
@@ -2209,6 +2222,14 @@ html {
 .text-red-500 {
   --tw-text-opacity: 1;
   color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
+.underline {
+  text-decoration-line: underline;
+}
+
+.decoration-indigo-500 {
+  text-decoration-color: #6366f1;
 }
 
 .caret-red-700 {

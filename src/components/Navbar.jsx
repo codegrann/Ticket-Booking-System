@@ -27,7 +27,7 @@ const Navbar = ({ role, setRole }) => {
     <nav className="navbar">
       <div className="container ">
         <div
-          className="logo"
+          className="logo font-bold italic text-xl cursor-pointer underline decoration-indigo-500"
           onClick={() => {
             navigate("/");
           }}
