@@ -97,9 +97,9 @@ function App() {
   const addEvent = (event) => {
     setEvents([...events, event]);
   };
-  // const removeEvent = (events) => {
-  //   setEvents(events.filter((e) => e.id !== selectedTicket.id));
-  // };
+  const removeEvent = (events) => {
+    setEvents(events.filter((e) => e.id !== selectedTicket.id));
+  };
 
   // MANAGING USER EVENTS
   const addToMyEvents = (event) => {
@@ -157,9 +157,10 @@ function App() {
               element={
                 <Admin
                   events={events}
+                  setEvents={setEvents}
                   addEvent={addEvent}
                   role={role}
-                  // removeEvent={removeEvent}
+                  removeEvent={removeEvent}
                 />
               }
             />

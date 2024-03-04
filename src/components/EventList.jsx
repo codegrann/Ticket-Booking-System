@@ -4,11 +4,10 @@ import EventCard from "./EventCard";
 function EventList({
   bookTicket,
   events,
+  setEvents,
   selectedTicket,
   role,
   bookedEventsCount,
-  // removeEvent,
-  // removeFromMyEvents,
 }) {
   return (
     <div className="my-10">
@@ -24,8 +23,8 @@ function EventList({
             selectedTicket={selectedTicket}
             role={role}
             bookedEventsCount={bookedEventsCount}
-            // removeEvent={removeEvent}
-            // removeFromMyEvents={removeFromMyEvents}
+            events={events}
+            setEvents={setEvents}
           />
         ))}
       </div>

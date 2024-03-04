@@ -2,7 +2,14 @@ import React from "react";
 // import PropTypes from "prop-types";
 import { Link } from "react-router-dom"; // Assuming you're using React Router for navigation
 
-function EventCard({ event, bookTicket, selectedTicket, role }) {
+function EventCard({
+  event,
+  bookTicket,
+  selectedTicket,
+  events,
+  setEvents,
+  role,
+}) {
   const { id, name, date, location, tickets } = event;
 
   return (
@@ -27,7 +34,12 @@ function EventCard({ event, bookTicket, selectedTicket, role }) {
         ))}
       </ul>
       {role == "ADMIN" && (
-        <Link className="btn btn-error btn-outline">Remove event</Link>
+        <Link
+          className="btn btn-error btn-outline"
+          onClick={() => setEvents(events.filter((e) => e.id !== event.id))}
+        >
+          Remove event
+        </Link>
       )}
       {role == "CLIENT" && (
         <Link
