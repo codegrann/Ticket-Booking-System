@@ -54,12 +54,14 @@ function EventCard({
       {role == "" && (
         <Link
           // to={`/events/${id}/book`}
-          className="btn btn-outline"
+          className="btn btn-outline disabled:text-gray-900"
           onClick={() => bookTicket(event)}
+          disabled={role == ""}
         >
           Book Now
         </Link>
       )}
+      {role == "" && <p>Login to book</p>}
     </div>
   );
 }
