@@ -1,5 +1,5 @@
 TO DO's
-Admin to add/edit event to eventlist, maximum no. of attendees.
+Admin to add event to eventlist, maximum no. of attendees.
 Set local Storage - user, event lists
 
 If > 5 tickets, you can't book more than 5 events.
