@@ -13,7 +13,12 @@ function EventCard({
   const { id, name, date, location, tickets } = event;
 
   return (
-    <div className="border-2 rounded-lg shadow-lg p-4 flex flex-col gap-4 min-w-[290px] max-w-[435px]">
+    <div className="border-2 relative rounded-lg shadow-lg p-4 flex flex-col gap-4 min-w-[290px] max-w-[435px]">
+      {role == "ADMIN" && (
+        <span className="text-xs text-red-600 absolute cursor-pointer right-2 top-0">
+          Edit
+        </span>
+      )}
       <h2 className="text-lg">{name}</h2>
       <p className="flex gap-4">
         <span>Date: {date}</span> <span>Location: {location}</span>
