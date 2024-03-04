@@ -22,18 +22,21 @@ function Admin({ events, setEvents, addEvent, removeEvent, role }) {
   const addEventToList = (e) => {
     e.preventDefault();
     addClicked &&
-      setNewEvent({
-        id: id,
-        name: eventName,
-        date: date,
-        location: location,
-        tickets: [...tickets],
-        // VIP: VIP,
-        // Regular: Regular,
-      });
+      setEvents([
+        ...events,
+        {
+          id: id,
+          name: eventName,
+          date: date,
+          location: location,
+          tickets: [...tickets],
+          // VIP: VIP,
+          // Regular: Regular,
+        },
+      ]);
 
-    console.log(newEvent);
-    alert("Added event successfully");
+    // console.log(newEvent);
+    // alert("Added event successfully");
 
     // addEvent(newEvent);
     setAddClicked(false);
