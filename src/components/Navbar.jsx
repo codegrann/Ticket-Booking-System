@@ -56,7 +56,7 @@ const Navbar = ({ role, setRole }) => {
             )}
             {role == "ADMIN" && (
               <li
-                className="border-2 cursor-pointer w-16 md:w-8"
+                className="cursor-pointer w-16 md:w-8"
                 onClick={() => {
                   navigate("/admin");
                 }}
@@ -66,7 +66,7 @@ const Navbar = ({ role, setRole }) => {
             )}
             {role == "CLIENT" && (
               <li
-                className="border-2 cursor-pointer w-16 md:w-8"
+                className="cursor-pointer w-16 md:w-8"
                 onClick={() => {
                   navigate("/client");
                 }}

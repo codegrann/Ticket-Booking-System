@@ -131,13 +131,21 @@ function EventCard({
         ))}
       </ul>
       {role === "ADMIN" && isEditing && (
-        <button className="btn btn-error btn-outline" onClick={handleSave}>
+        <button className="btn btn-success" onClick={handleSave}>
           Save
         </button>
       )}
-      {role === "ADMIN" && !isEditing && (
+      {/* {role === "ADMIN" && !isEditing && (
         <button className="btn btn-error btn-outline" onClick={toggleEdit}>
           Edit
+        </button>
+      )} */}
+      {role == "ADMIN" && (
+        <button
+          className="btn btn-error btn-outline"
+          onClick={() => setEvents(events.filter((e) => e.id !== event.id))}
+        >
+          Remove event
         </button>
       )}
       {role === "CLIENT" && (
