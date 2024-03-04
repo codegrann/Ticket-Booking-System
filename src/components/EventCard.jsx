@@ -102,13 +102,14 @@ function EventCard({
                 <input
                   type="text"
                   value={ticket.type}
-                  className="caret-red-700 py-4 bg-transparent input input-success input-sm md:py-6  w-full max-w-xs md:input-md md:max-w-xl"
+                  className="caret-red-700 py-4 bg-transparent input  input-sm md:py-6  w-full max-w-xs md:input-md md:max-w-xl"
                   readOnly
-                />{" "}
-                :{" "}
+                />
+
                 <input
                   type="number"
                   value={ticket.price}
+                  className="caret-red-700 py-4 bg-transparent input input-success input-sm md:py-6  w-full max-w-xs md:input-md md:max-w-xl"
                   onChange={(e) =>
                     handleTicketChange(index, "price", e.target.value)
                   }
