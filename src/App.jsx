@@ -168,6 +168,7 @@ function App() {
                 <Admin
                   events={events}
                   addEvent={addEvent}
+                  role={role}
                   // removeEvent={removeEvent}
                 />
               }
