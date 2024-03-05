@@ -42,10 +42,11 @@ function EventCard({
     updatedTickets[index][key] = value;
     setTickets(updatedTickets);
   };
-  const position = isEditing ? "absolute top-0 left-0" : "";
+  const position = isEditing ? "z-10 fixed top-0 left-0" : "relative";
+  const bgColof = isEditing ? "bg-white" : "transparent";
   return (
     <div
-      className={`border-2 relative rounded-lg shadow-lg p-4 flex flex-col gap-4 min-w-[290px] max-w-[435px] ${position}`}
+      className={`border-2  rounded-lg shadow-lg p-4 flex flex-col gap-4 min-w-[290px] max-w-[435px] ${position}`}
     >
       {role === "ADMIN" && (
         <span
