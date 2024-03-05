@@ -42,10 +42,10 @@ function EventCard({
     updatedTickets[index][key] = value;
     setTickets(updatedTickets);
   };
-  const position = isEditing ? " bg-white z-10 " : "";
+  // const position = isEditing ? " bg-white z-10 " : "";
   return (
     <div
-      className={`border-2 relative rounded-lg shadow-lg p-4 flex flex-col gap-4 min-w-[290px] max-w-[435px] ${position}`}
+      className={`border-2 relative rounded-lg shadow-lg p-4 flex flex-col gap-4 min-w-[290px] max-w-[435px] `}
     >
       {role === "ADMIN" && (
         <span
