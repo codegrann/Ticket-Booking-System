@@ -19,6 +19,7 @@ const Navbar = ({ role, setRole }) => {
   };
   const logOut = () => {
     setRole("");
+    setShowNavbar(false);
     navigate("/");
     alert("logged out successfully");
   };
@@ -40,7 +41,13 @@ const Navbar = ({ role, setRole }) => {
         </div>
         <div className={`nav-elements  ${showNavbar && "active"} `}>
           <ul>
-            <li onClick={() => navigate("/")} className="cursor-pointer">
+            <li
+              onClick={() => {
+                setShowNavbar(false);
+                navigate("/");
+              }}
+              className="cursor-pointer"
+            >
               Events
             </li>
             {role == "" && (
@@ -48,6 +55,7 @@ const Navbar = ({ role, setRole }) => {
                 id="getstarted"
                 className="btn btn-success btn-outline"
                 onClick={() => {
+                  setShowNavbar(false);
                   navigate("/signin");
                 }}
               >
@@ -58,6 +66,7 @@ const Navbar = ({ role, setRole }) => {
               <li
                 className="cursor-pointer w-16 md:w-8"
                 onClick={() => {
+                  setShowNavbar(false);
                   navigate("/admin");
                 }}
               >
@@ -68,6 +77,7 @@ const Navbar = ({ role, setRole }) => {
               <li
                 className="cursor-pointer w-16 md:w-8"
                 onClick={() => {
+                  setShowNavbar(false);
                   navigate("/client");
                 }}
               >
