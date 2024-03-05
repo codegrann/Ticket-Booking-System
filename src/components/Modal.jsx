@@ -14,13 +14,13 @@ const Modal = ({
     navigate("/client");
   };
   const handleTicketTypeSelection = (type) => {
-    console.log(`Selected ticket type: ${type}`);
-    if (bookedEvents.includes(selectedTicket)) {
-      alert("You already booked this event");
+    // console.log(`Selected ticket type: ${type}`);
+    if (bookedEventsCount == 5) {
+      alert("You can only book five tickets at a time.");
       return;
     }
-    if (bookedEventsCount > 5) {
-      alert("You can only book 5 events at a time");
+    if (bookedEvents.includes(selectedTicket)) {
+      alert("You already booked this event");
       return;
     }
     addToMyEvents(selectedTicket);

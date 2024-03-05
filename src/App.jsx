@@ -103,6 +103,7 @@ function App() {
 
   // MANAGING USER EVENTS
   const addToMyEvents = (event) => {
+    //  if (bookedEventsCount > 5) alert("can't booke more than 5 events");
     setBookedEventsCount(bookedEventsCount + 1);
 
     setBookedEvents([...bookedEvents, event]);
