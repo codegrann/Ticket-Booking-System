@@ -42,8 +42,9 @@ function EventCard({
     updatedTickets[index][key] = value;
     setTickets(updatedTickets);
   };
-  const position = isEditing ? " bg-white z-10 fixed top-0 left-0" : "relative";
-  const bgColof = isEditing ? "bg-white" : "transparent";
+  const position = isEditing
+    ? " md:bg-white md:z-10 md:fixed md:top-1/4 md:left-1/4"
+    : "md:relative";
   return (
     <div
       className={`border-2  rounded-lg shadow-lg p-4 flex flex-col gap-4 min-w-[290px] max-w-[435px] ${position}`}

@@ -1824,6 +1824,18 @@ html {
   top: 200px;
 }
 
+.top-1\/4 {
+  top: 25%;
+}
+
+.left-1\/2 {
+  left: 50%;
+}
+
+.left-1\/4 {
+  left: 25%;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -2344,6 +2356,26 @@ html {
 }
 
 @media (min-width: 768px) {
+  .md\:fixed {
+    position: fixed;
+  }
+
+  .md\:relative {
+    position: relative;
+  }
+
+  .md\:left-1\/4 {
+    left: 25%;
+  }
+
+  .md\:top-1\/4 {
+    top: 25%;
+  }
+
+  .md\:z-10 {
+    z-index: 10;
+  }
+
   .md\:mb-24 {
     margin-bottom: 6rem;
   }
@@ -2370,6 +2402,11 @@ html {
 
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:bg-white {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   }
 
   .md\:p-10 {
