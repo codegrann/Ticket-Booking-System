@@ -1808,36 +1808,20 @@ html {
   inset: 0px;
 }
 
-.top-\[200px\] {
-  top: 200px;
+.left-0 {
+  left: 0px;
 }
 
-.left-6 {
-  left: 1.5rem;
-}
-
-.top-6 {
-  top: 1.5rem;
+.right-2 {
+  right: 0.5rem;
 }
 
 .top-0 {
   top: 0px;
 }
 
-.right-6 {
-  right: 1.5rem;
-}
-
-.top-2 {
-  top: 0.5rem;
-}
-
-.right-0 {
-  right: 0px;
-}
-
-.right-2 {
-  right: 0.5rem;
+.top-\[200px\] {
+  top: 200px;
 }
 
 .z-10 {
@@ -2106,6 +2090,11 @@ html {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .fill-current {
   fill: currentColor;
 }
@@ -2187,14 +2176,14 @@ html {
   line-height: 1.25rem;
 }
 
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .font-bold {
@@ -2207,10 +2196,6 @@ html {
 
 .font-semibold {
   font-weight: 600;
-}
-
-.font-extralight {
-  font-weight: 200;
 }
 
 .italic {
@@ -2257,16 +2242,6 @@ html {
   color: rgb(34 197 94 / var(--tw-text-opacity));
 }
 
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-yellow-700 {
-  --tw-text-opacity: 1;
-  color: rgb(161 98 7 / var(--tw-text-opacity));
-}
-
 .text-red-500 {
   --tw-text-opacity: 1;
   color: rgb(239 68 68 / var(--tw-text-opacity));
@@ -2275,6 +2250,16 @@ html {
 .text-red-600 {
   --tw-text-opacity: 1;
   color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-yellow-700 {
+  --tw-text-opacity: 1;
+  color: rgb(161 98 7 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -2324,15 +2309,6 @@ html {
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
-}
-
-.focus\:outline-green-500:focus {
-  outline-color: #22c55e;
-}
-
-.disabled\:text-white:disabled {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .disabled\:text-gray-900:disabled {

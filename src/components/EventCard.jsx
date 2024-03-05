@@ -42,7 +42,7 @@ function EventCard({
     updatedTickets[index][key] = value;
     setTickets(updatedTickets);
   };
-  const position = isEditing ? "z-10 fixed top-0 left-0" : "relative";
+  const position = isEditing ? " bg-white z-10 fixed top-0 left-0" : "relative";
   const bgColof = isEditing ? "bg-white" : "transparent";
   return (
     <div
