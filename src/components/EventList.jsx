@@ -10,7 +10,7 @@ function EventList({
   bookedEventsCount,
 }) {
   return (
-    <div className="my-10">
+    <div className="my-10 relative">
       <h3 className="text-black font-medium md:text-xl mb-4">
         Upcoming Events
       </h3>
