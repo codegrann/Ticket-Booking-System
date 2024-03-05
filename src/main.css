@@ -1964,6 +1964,10 @@ html {
   width: 100%;
 }
 
+.w-10 {
+  width: 2.5rem;
+}
+
 .min-w-\[290px\] {
   min-width: 290px;
 }
@@ -2402,6 +2406,10 @@ html {
 
   .md\:w-32 {
     width: 8rem;
+  }
+
+  .md\:w-16 {
+    width: 4rem;
   }
 
   .md\:max-w-xl {
