@@ -34,7 +34,7 @@ const Navbar = ({ role, setRole }) => {
           }}
         >
           {/* <Logo/> */}
-          logo
+          <img src="/person.png" alt="person" className="" />
         </div>
         <div className="menu-icon" onClick={handleShowNavbar}>
           <Hamburger />
