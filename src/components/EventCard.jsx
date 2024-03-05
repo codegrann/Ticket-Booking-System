@@ -42,9 +42,11 @@ function EventCard({
     updatedTickets[index][key] = value;
     setTickets(updatedTickets);
   };
-
+  const position = isEditing ? "absolute top-32 left-32" : "";
   return (
-    <div className="border-2 relative rounded-lg shadow-lg p-4 flex flex-col gap-4 min-w-[290px] max-w-[435px]">
+    <div
+      className={`border-2 relative rounded-lg shadow-lg p-4 flex flex-col gap-4 min-w-[290px] max-w-[435px] ${position}`}
+    >
       {role === "ADMIN" && (
         <span
           className="text-xs text-red-600 absolute cursor-pointer right-2 top-0"
