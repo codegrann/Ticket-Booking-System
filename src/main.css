@@ -2396,6 +2396,14 @@ html {
     width: 600px;
   }
 
+  .md\:w-28 {
+    width: 7rem;
+  }
+
+  .md\:w-32 {
+    width: 8rem;
+  }
+
   .md\:max-w-xl {
     max-width: 36rem;
   }

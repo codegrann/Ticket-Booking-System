@@ -28,13 +28,13 @@ const Navbar = ({ role, setRole }) => {
     <nav className="navbar">
       <div className="container ">
         <div
-          className="logo w-16 md:w-8 font-bold italic text-xl cursor-pointer underline decoration-indigo-500"
+          className="logo w-16  font-bold italic text-xl cursor-pointer underline decoration-indigo-500"
           onClick={() => {
             navigate("/");
           }}
         >
-          <ImageContainer src="/eventtribe.png" alt="person" className="" />
-          <img src="/eventtribe.png" alt="person" className="" />
+          <ImageContainer src="/eventtribe2.png" alt="person" className="" />
+          <img src="/eventtribe2.png" alt="person" className="" />
         </div>
         <div className="menu-icon" onClick={handleShowNavbar}>
           <Hamburger />
