@@ -139,6 +139,8 @@ function App() {
   const closeModal = () => setShowModal(false);
   // END OF USER EVENTS
 
+  // console.log(localStorage)
+
   return (
     <>
       <Router>
