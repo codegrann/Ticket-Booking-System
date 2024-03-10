@@ -1808,10 +1808,6 @@ html {
   inset: 0px;
 }
 
-.left-0 {
-  left: 0px;
-}
-
 .right-2 {
   right: 0.5rem;
 }
@@ -1822,18 +1818,6 @@ html {
 
 .top-\[200px\] {
   top: 200px;
-}
-
-.top-1\/4 {
-  top: 25%;
-}
-
-.left-1\/2 {
-  left: 50%;
-}
-
-.left-1\/4 {
-  left: 25%;
 }
 
 .z-10 {
@@ -1944,6 +1928,10 @@ html {
   min-height: 100vh;
 }
 
+.w-10 {
+  width: 2.5rem;
+}
+
 .w-16 {
   width: 4rem;
 }
@@ -1962,10 +1950,6 @@ html {
 
 .w-full {
   width: 100%;
-}
-
-.w-10 {
-  width: 2.5rem;
 }
 
 .min-w-\[290px\] {
@@ -2104,11 +2088,6 @@ html {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .fill-current {
@@ -2360,32 +2339,16 @@ html {
 }
 
 @media (min-width: 768px) {
-  .md\:fixed {
-    position: fixed;
-  }
-
-  .md\:relative {
-    position: relative;
-  }
-
-  .md\:left-1\/4 {
-    left: 25%;
-  }
-
-  .md\:top-1\/4 {
-    top: 25%;
-  }
-
-  .md\:z-10 {
-    z-index: 10;
-  }
-
   .md\:mb-24 {
     margin-bottom: 6rem;
   }
 
   .md\:w-1\/2 {
     width: 50%;
+  }
+
+  .md\:w-16 {
+    width: 4rem;
   }
 
   .md\:w-5\/6 {
@@ -2400,29 +2363,12 @@ html {
     width: 600px;
   }
 
-  .md\:w-28 {
-    width: 7rem;
-  }
-
-  .md\:w-32 {
-    width: 8rem;
-  }
-
-  .md\:w-16 {
-    width: 4rem;
-  }
-
   .md\:max-w-xl {
     max-width: 36rem;
   }
 
   .md\:flex-row {
     flex-direction: row;
-  }
-
-  .md\:bg-white {
-    --tw-bg-opacity: 1;
-    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   }
 
   .md\:p-10 {
