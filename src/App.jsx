@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
@@ -76,6 +76,28 @@ function App() {
     },
   ]);
   const [bookedEvents, setBookedEvents] = useState([]);
+
+  // Load events and bookedEvents from local storage on component mount
+  useEffect(() => {
+    const storedEvents = JSON.parse(localStorage.getItem("events"));
+    if (storedEvents) {
+      setEvents(storedEvents);
+    }
+
+    const storedBookedEvents = JSON.parse(localStorage.getItem("bookedEvents"));
+    if (storedBookedEvents) {
+      setBookedEvents(storedBookedEvents);
+    }
+  }, []);
+
+  // Save events and bookedEvents to local storage whenever they change
+  useEffect(() => {
+    localStorage.setItem("events", JSON.stringify(events));
+  }, [events]);
+
+  useEffect(() => {
+    localStorage.setItem("bookedEvents", JSON.stringify(bookedEvents));
+  }, [bookedEvents]);
 
   // HANDLE SIGN IN
   const [user, setUser] = useState({
